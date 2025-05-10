@@ -111,3 +111,12 @@ h1:before, .anchor:before {
 .site-description {
   text-align: justify;
 }
+
+.justified-text {
+  text-align: justify;
+  text-justify: inter-word;
+  word-spacing: 0.1em;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+  margin-bottom: 1em;
+}
