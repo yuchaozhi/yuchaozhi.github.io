@@ -51,6 +51,7 @@ Some examples:
 5. Add your homepage content in `_pages/about.md`.
    1. You can use html+markdown syntax just same as jekyll.
    2. You can use a `<span>` tag with class `show_paper_citations` and attribute `data` to display the citations of your paper. Set the data to the google scholar paper ID. For
+
       ```html
       <span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span>
       ```
@@ -76,5 +77,5 @@ We appreciate the following GitHub repos a lot for their valuable code and effor
 - AcadHomepage incorporates Font Awesome, which is distributed under the terms of the SIL OFL 1.1 and MIT License.
 - AcadHomepage is influenced by the github repo [mmistakes/minimal-mistakes](https://github.com/mmistakes/minimal-mistakes), which is distributed under the MIT License.
 - AcadHomepage is influenced by the github repo [academicpages/academicpages.github.io](https://github.com/academicpages/academicpages.github.io), which is distributed under the MIT License.
-- [acad-homepage.github.io](https://github.com/RayeRen/acad-homepage.github.io)
-- [rayeren.github.io](https://github.com/RayeRen/rayeren.github.io)
+- AcadHomepage is influenced by the github repo [acad-homepage.github.io](https://github.com/RayeRen/acad-homepage.github.io), which is distributed under the MIT License.
+- AcadHomepage is influenced by the github repo [rayeren.github.io](https://github.com/RayeRen/rayeren.github.io), which is distributed under the MIT License.
