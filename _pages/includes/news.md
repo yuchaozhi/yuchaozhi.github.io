@@ -2,4 +2,3 @@
 
 - *2025.05*: 🎉I release a personal [homepage template](https://github.com/yuchaozhi/yuchaozhi.github.io) specifically designed for academic researchers. Welcome to STAR and FORK!
 - *2024.10*: I join ByteDance × Doubao MarsCode TikTok `<img src='./images/tiktok.png' style='width: 6em;'>` AI Youth Training Camp as an intern!
-- I work at TikTok `<img src='./images/tiktok.png' style='width: 6em;'>` as a research scientist now in Singapore.
