@@ -1,7 +1,7 @@
 # 📖 Educations
 
 - *2023.09 - 2026.06 (now)*, Master, School of Mathematics and Statistics, Hainan University, Haikou.
-- *2019.09 - 2023.06*, Undergraduate, College of Flexible Electronics, Shaanxi University of Science & Technology, Xi'an.
+- *2019.09 - 2023.06*, Undergraduate, College of Flexible Electronics, Shaanxi University of Science &amp; Technology, Xi'an.
 
 # 💬 Invited Talks
 
