@@ -2,4 +2,9 @@ I am currently pursuing a master's degree at the School of Mathematics and Stati
 
 My research interest includes spatiotemporal data mining, traffic flow forecasting and machine learning.
 
-papers [ahref=&#39;https://scholar.google.com/citations?user=4FA6C0AAAAAJ&#39;](ahref='https://scholar.google.com/citations?user=4FA6C0AAAAAJ')[imgsrc=&#34;https://img.shields.io/endpoint?logo=Google%20Scholar&amp;url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FRayeRen%2Frayeren.github.io@google-scholar-stats%2Fgs_data_shieldsio.json&amp;labelColor=f6f6f6&amp;color=9cf&amp;style=flat&amp;label=citations&#34;](imgsrc=%22https://img.shields.io/endpoint?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FRayeRen%2Frayeren.github.io@google-scholar-stats%2Fgs_data_shieldsio.json&labelColor=f6f6f6&color=9cf&style=flat&label=citations%22)`</a>`
+papers [ahref=&#39;https://scholar.google.com/citations?user=4FA6C0AAAAAJ&#39;](ahref='https://scholar.google.com/citations?user=4FA6C0AAAAAJ')[imgsrc=&#34;https://img.shields.io/endpoint?logo=Google%20Scholar&amp;url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FRayeRen%2Frayeren.github.io@google-scholar-stats%2Fgs_data_shieldsio.json&amp;labelColor=f6f6f6&amp;color=9cf&amp;style=flat&amp;label=citations&#34;](imgsrc=%22https://img.shields.io/endpoint?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FRayeRen%2Frayeren.github.io@google-scholar-stats%2Fgs_data_shieldsio.json&labelColor=f6f6f6&color=9cf&style=flat&label=citations%22) `</a>`
+
+Prof. [Youyi Song](https://scholar.google.com/citations?user=gSzHVNkAAAAJ),
+Dr. [Zhizhe Lin](https://scholar.google.com/citations?user=j2aV91UAAAAJ),
+Postdoc. [Farooq Ahmed](https://scholar.google.com/citations?user=bTVezlQAAAAJ),
+and Postdoc. [Shahid Ali](https://scholar.google.com/citations?user=B3jovoIAAAAJ)
