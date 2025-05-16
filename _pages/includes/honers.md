@@ -1,6 +1,6 @@
 # 🎖 Honors and Awards
 
-- *2024.12* The Second Prize in the 21st Huawei Cup China Postgraduate Mathematical Modeling Contest
+- *2024.12* The Second Prize in the 21st Huawei Cup China Postgraduate Mathematical Modeling Competition
 - *2024.11* Approval of the National College Student Innovation and Entrepreneurship Training Program Project
 - *2024.10* The Gold Award of the China International College Students' Innovation and Entrepreneurship Competition (Hainan Region)
 - *2024.10* Approval of the Graduate Student Science and Technology Festival Innovation Project of Hainan University
