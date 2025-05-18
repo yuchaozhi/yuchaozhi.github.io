@@ -8,7 +8,7 @@ My Personal Academic Homepage
 
 </div>
 
-<p align="center">Welcome to my personal academic homepage. Here you can find my research projects, publications, and other academic activities.
+<p>Welcome to my personal academic homepage. Here you can find my research projects, publications, and other academic activities.
 </p>
 
 <p align="center">
