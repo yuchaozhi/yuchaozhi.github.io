@@ -4,14 +4,12 @@ AcadHomepage
 
 <div align="center">
 
-[![](https://img.shields.io/github/stars/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io)
-[![](https://img.shields.io/github/forks/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io)
-[![](https://img.shields.io/github/issues/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io)
-[![](https://img.shields.io/github/license/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io/blob/main/LICENSE)  | [中文文档](./docs/README-zh.md)
+[![](https://img.shields.io/github/license/yuchaozhi/yuchaozhi.github.io)](https://github.com/yuchaozhi/yuchaozhi.github.io/blob/main/LICENSE)  | [中文文档](./docs/README-zh.md)
 
 </div>
 
-<p align="center">A Modern and Responsive Academic Personal Homepage</p>
+<p align="center">Welcome to my personal academic homepage. Here you can find my research projects, publications, and other academic activities.
+</p>
 
 <p align="center">
     <br>
@@ -21,8 +19,8 @@ AcadHomepage
 
 Some examples:
 
-- [Demo Page](https://rayeren.github.io/acad-homepage.github.io/)
-- [Personal Homepage of the author](https://rayeren.github.io/)
+- [Personal Homepage of the author](https://yuchaozhi.github.io/)
+- [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/yuchaozhi/yuchaozhi.github.io)
 
 ## Key Features
 
