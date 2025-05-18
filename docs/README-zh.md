@@ -20,8 +20,8 @@ My Personal Academic Homepage
 
 一些例子：
 - [作者的个人主页](https://yuchaozhi.github.io/)
-- [![询问DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/yuchaozhi/yuchaozhi.github.io)
-关于此个人学术主页的设计和实现的详细说明，请参考此[链接](https://deepwiki.com/yuchaozhi/yuchaozhi.github.io). [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/yuchaozhi/yuchaozhi.github.io)
+
+关于此个人学术主页的设计和实现的详细说明，请参考此[链接](https://deepwiki.com/yuchaozhi/yuchaozhi.github.io). [![询问DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/yuchaozhi/yuchaozhi.github.io)
 
 
 ## 主要特点
