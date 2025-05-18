@@ -17,10 +17,8 @@ My Personal Academic Homepage
     <br>
 </p>
 
-Some examples:
-
 - [Personal Homepage of the author](https://yuchaozhi.github.io/)
-- [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/yuchaozhi/yuchaozhi.github.io)
+For a detailed explanation of the design and implementation of this personal academic homepage, please refer to this [url](https://deepwiki.com/yuchaozhi/yuchaozhi.github.io). [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/yuchaozhi/yuchaozhi.github.io)
 
 ## Key Features
 
