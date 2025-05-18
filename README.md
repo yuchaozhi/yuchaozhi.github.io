@@ -4,6 +4,7 @@ My Personal Academic Homepage
 
 <div align="center">
 
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/yuchaozhi/yuchaozhi.github.io)
 [![](https://img.shields.io/github/license/yuchaozhi/yuchaozhi.github.io)](https://github.com/yuchaozhi/yuchaozhi.github.io/blob/main/LICENSE)  | [中文文档](./docs/README-zh.md)
 
 </div>
@@ -19,7 +20,7 @@ My Personal Academic Homepage
 
 - [Personal Homepage of the author](https://yuchaozhi.github.io/)
 
-For a detailed explanation of the design and implementation of this personal academic homepage, please refer to this [url](https://deepwiki.com/yuchaozhi/yuchaozhi.github.io). [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/yuchaozhi/yuchaozhi.github.io)
+For a detailed explanation of the design and implementation of this personal academic homepage, please refer to this [url](https://deepwiki.com/yuchaozhi/yuchaozhi.github.io).
 
 ## Key Features
 

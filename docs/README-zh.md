@@ -5,7 +5,8 @@ My Personal Academic Homepage
 
 <div align="center">
 
-[![](https://img.shields.io/github/license/yuchaozhi/yuchaozhi.github.io)](https://github.com/yuchaozhi/yuchaozhi.github.io/blob/main/LICENSE)  | [English README](../README.md) 
+[![询问DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/yuchaozhi/yuchaozhi.github.io)
+[![](https://img.shields.io/github/license/yuchaozhi/yuchaozhi.github.io)](https://github.com/yuchaozhi/yuchaozhi.github.io/blob/main/LICENSE)  | [English README](../README.md)
 
 </div>
 
@@ -18,10 +19,9 @@ My Personal Academic Homepage
     <br>
 </p>
 
-一些例子：
 - [作者的个人主页](https://yuchaozhi.github.io/)
 
-关于此个人学术主页的设计和实现的详细说明，请参考此[链接](https://deepwiki.com/yuchaozhi/yuchaozhi.github.io). [![询问DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/yuchaozhi/yuchaozhi.github.io)
+关于此个人学术主页的设计和实现的详细说明，请参考此[链接](https://deepwiki.com/yuchaozhi/yuchaozhi.github.io).
 
 
 ## 主要特点
