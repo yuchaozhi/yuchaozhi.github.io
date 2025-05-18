@@ -1,18 +1,15 @@
 
 <h1 align="center">
-AcadHomepage
+My Personal Academic Homepage
 </h1>
 
 <div align="center">
 
-[![](https://img.shields.io/github/stars/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io)
-[![](https://img.shields.io/github/forks/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io)
-[![](https://img.shields.io/github/issues/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io)
-[![](https://img.shields.io/github/license/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io/blob/main/LICENSE)  | [English README](../README.md) 
+[![](https://img.shields.io/github/license/yuchaozhi/yuchaozhi.github.io)](https://github.com/yuchaozhi/yuchaozhi.github.io/blob/main/LICENSE)  | [English README](../README.md) 
 
 </div>
 
-<p align="center">一个现代、响应式的个人学术主页</p>
+<p align="center">欢迎来到我的个人学术主页。在这里你可以找到我的研究项目、出版物和其他学术活动。</p>
 
 
 <p align="center">
@@ -22,8 +19,8 @@ AcadHomepage
 </p>
 
 一些例子：
-- [样例页面](https://rayeren.github.io/acad-homepage.github.io/)
-- [作者的个人主页](https://rayeren.github.io/)
+- [作者的个人主页](https://yuchaozhi.github.io/)
+- [![询问DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/yuchaozhi/yuchaozhi.github.io)
 
 ## 主要特点
 - **自动更新谷歌学术引用**: 借助谷歌学术爬虫和github action功能，本仓库可以自动更新作者的引用数和论文引用数。

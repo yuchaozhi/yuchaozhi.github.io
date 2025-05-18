@@ -1,5 +1,5 @@
 <h1 align="center">
-AcadHomepage
+My Personal Academic Homepage
 </h1>
 
 <div align="center">
