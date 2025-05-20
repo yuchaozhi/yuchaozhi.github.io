@@ -1,4 +1,3 @@
-<!-- # 💻 Selected Research Papers -->
 # 📝 Publications 
 
 My full paper list is shown at [my personal homepage](https://yuchaozhi.github.io).
