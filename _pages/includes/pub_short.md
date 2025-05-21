@@ -5,6 +5,7 @@ My full paper list is shown at [my personal homepage](https://yuchaozhi.github.i
 #### 🌍Spatiotemporal Data Mining
 
 - ``CICTP 2025`` Efficient Dynamic Memory Network for Spatiotemporal Traffic Flow Forecasting, **Chaozhi Yu**, Hongnan Cheng, Xuancheng cen, et al, Accept.
+- ``ACM EITCE 2025`` Enhancing Stock Price Prediction with GLTCN: A Hybrid Model for Complex Market Dynamics, Yudi Xu, **Chaozhi Yu**, Hongnan Cheng, et al, In Production.
 
 #### 📚Image Processing
 
