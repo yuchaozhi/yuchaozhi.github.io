@@ -5,7 +5,7 @@ My Personal Academic Homepage
 <div align="center">
 
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/yuchaozhi/yuchaozhi.github.io)
-[![](https://img.shields.io/github/license/yuchaozhi/yuchaozhi.github.io)](https://github.com/yuchaozhi/yuchaozhi.github.io/blob/main/LICENSE) [![中文文档](https://img.shields.io/badge/语言-中文-0366d6?style=flat-square&logo=github&logoColor=white)](./docs/README-zh.md)
+[![](https://img.shields.io/github/license/yuchaozhi/yuchaozhi.github.io)](https://github.com/yuchaozhi/yuchaozhi.github.io/blob/main/LICENSE) [![中文文档](https://img.shields.io/badge/语言-切换中文-0366d6?style=flat-square&logo=github&logoColor=white)](./docs/README-zh.md)
 
 </div>
 
