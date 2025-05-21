@@ -5,15 +5,9 @@ My Personal Academic Homepage
 <div align="center">
 
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/yuchaozhi/yuchaozhi.github.io)
-[![](https://img.shields.io/github/license/yuchaozhi/yuchaozhi.github.io)](https://github.com/yuchaozhi/yuchaozhi.github.io/blob/main/LICENSE)  | [![中文文档](https://img.shields.io/badge/语言-中文-0366d6?style=flat-square&logo=github&logoColor=white)](./docs/README-zh.md)
+[![](https://img.shields.io/github/license/yuchaozhi/yuchaozhi.github.io)](https://github.com/yuchaozhi/yuchaozhi.github.io/blob/main/LICENSE) [![中文文档](https://img.shields.io/badge/语言-中文-0366d6?style=flat-square&logo=github&logoColor=white)](./docs/README-zh.md)
 
 </div>
-
-[![](https://img.shields.io/github/license/yuchaozhi/yuchaozhi.github.io)](https://github.com/yuchaozhi/yuchaozhi.github.io/blob/main/LICENSE) <span style="display: inline-block; margin: 0 8px; vertical-align: middle;">|</span> [![中文文档](https://img.shields.io/badge/语言-中文-0366d6?style=flat-square&logo=github&logoColor=white)](./docs/README-zh.md)
-
-[![](https://img.shields.io/github/license/yuchaozhi/yuchaozhi.github.io)](https://github.com/yuchaozhi/yuchaozhi.github.io/blob/main/LICENSE) &nbsp;|&nbsp; [![中文文档](https://img.shields.io/badge/语言-中文-0366d6?style=flat-square&logo=github&logoColor=white)](./docs/README-zh.md)
-
-[![](https://img.shields.io/github/license/yuchaozhi/yuchaozhi.github.io)](https://github.com/yuchaozhi/yuchaozhi.github.io/blob/main/LICENSE) &#124; [![中文文档](https://img.shields.io/badge/语言-中文-0366d6?style=flat-square&logo=github&logoColor=white)](./docs/README-zh.md)
 
 <p>Welcome to my personal academic homepage. Here you can find my research projects, publications, and other academic activities.
 </p>
