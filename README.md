@@ -2,6 +2,8 @@
 My Personal Academic Homepage
 </h1>
 
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=yuchaozhi&label=Profile%20views&color=0e75b6&style=flat" alt="yuchaozhi" /> </p>
+
 <div align="center">
 
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/yuchaozhi/yuchaozhi.github.io)
