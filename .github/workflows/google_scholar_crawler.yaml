@@ -1,9 +1,9 @@
 name: Get Citation Data
 
 on: 
- page_build: 
- schedule:
-  - cron:  '0 8 * * *'
+#  page_build: 
+#  schedule:
+#   - cron:  '0 8 * * *'
  workflow_dispatch:
 
 jobs:
