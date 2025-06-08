@@ -193,4 +193,17 @@ permalink: /links/
 .scholar-link:hover {
   background-color: #0256b3;
 }
-</style> 
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // 预加载其他页面
+  var links = document.querySelectorAll('nav a');
+  links.forEach(function(link) {
+    var prefetchLink = document.createElement('link');
+    prefetchLink.rel = 'prefetch';
+    prefetchLink.href = link.href;
+    document.head.appendChild(prefetchLink);
+  });
+});
+</script> 
