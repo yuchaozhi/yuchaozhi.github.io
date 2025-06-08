@@ -25,4 +25,4 @@ main:
     url: "/#-skills"
 
   - title: "Links"
-    url: "/#-links"
+    url: "/links/"
