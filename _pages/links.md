@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Links"
-permalink: /#-links
+permalink: /links/
 ---
 
 <div class="links-container">
