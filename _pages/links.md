@@ -12,6 +12,13 @@ permalink: /links/
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 </head>
 
+<!-- 页面建设中提示横幅 -->
+<div class="construction-banner">
+  <span class="construction-icon">🚧</span>
+  <span class="construction-text">页面建设中</span>
+  <span class="construction-icon">🚧</span>
+</div>
+
 <div class="links-container">
   <div class="link-card">
     <h2>时空数据挖掘领域学者</h2>
