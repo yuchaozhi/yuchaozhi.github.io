@@ -119,6 +119,35 @@ permalink: /links/
 </div>
 
 <style>
+/* 页面建设中横幅样式 */
+.construction-banner {
+  background-color: #ffe57f;
+  color: #6b5900;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  animation: pulse 2s infinite;
+}
+
+.construction-icon {
+  font-size: 24px;
+  margin: 0 10px;
+}
+
+.construction-text {
+  letter-spacing: 2px;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.8; }
+  50% { opacity: 1; }
+  100% { opacity: 0.8; }
+}
+
 .links-container {
   max-width: 1200px;
   margin: 0 auto;
