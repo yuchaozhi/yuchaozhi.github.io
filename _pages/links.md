@@ -4,6 +4,14 @@ title: "Links"
 permalink: /links/
 ---
 
+<head>
+  <!-- 为Links页面专门添加favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.jpg">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+
 <div class="links-container">
   <div class="link-card">
     <h2>时空数据挖掘领域学者</h2>
@@ -205,5 +213,14 @@ document.addEventListener('DOMContentLoaded', function() {
     prefetchLink.href = link.href;
     document.head.appendChild(prefetchLink);
   });
+  
+  // 确保favicon加载
+  if (!document.querySelector("link[rel='icon']")) {
+    var favicon = document.createElement('link');
+    favicon.rel = 'icon';
+    favicon.type = 'image/x-icon';
+    favicon.href = '/images/favicon.ico';
+    document.head.appendChild(favicon);
+  }
 });
 </script> 
