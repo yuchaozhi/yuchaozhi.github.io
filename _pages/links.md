@@ -31,9 +31,15 @@ permalink: /links/
       <p class="institution">Tsinghua University</p>
       <p class="field">Research Areas: Machine learning, deep learning, transfer learning, scientific machine learning</p>
       <p class="h-index">h-index: 82</p>
-      <p class="description">Focusing on transfer learning, deep learning and computer vision research, with multiple high-quality publications in related fields</p>
+      <p class="description">
+        A leading researcher in transfer learning, deep learning, and computer vision, with numerous high-impact publications. 
+        Notably, he developed the widely-used 
+        <a href="https://github.com/thuml/Time-Series-Library" target="_blank">Time-Series-Library</a> 
+        for time series modeling and benchmarking.
+      </p>
       <a href="https://scholar.google.com/citations?user=_MjXpXkAAAAJ&hl=zh-CN" target="_blank" class="scholar-link">View Google Scholar Profile</a>
     </div>
+
 
     <div class="scholar-card">
       <h3>Philip S. Yu</h3>
