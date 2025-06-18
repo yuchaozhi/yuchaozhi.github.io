@@ -228,7 +228,6 @@ permalink: /links/
   color: #24292e;
   margin: 1rem 0;
   text-align: justify;
-  text-justify: inter-word;
 }
 
 .scholar-link {
