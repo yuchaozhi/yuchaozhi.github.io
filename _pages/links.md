@@ -228,6 +228,11 @@ permalink: /links/
   color: #24292e;
   margin: 1rem 0;
   text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  line-height: 1.6;
 }
 
 .scholar-link {
