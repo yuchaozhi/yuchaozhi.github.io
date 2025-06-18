@@ -32,7 +32,7 @@ permalink: /links/
       <p class="field">Research Areas: Machine learning, deep learning, transfer learning, scientific machine learning</p>
       <p class="h-index">h-index: 82</p>
       <p class="description">
-        A leading researcher in transfer learning, deep learning, and computer vision, with numerous high-impact publications. 
+        A leading researcher in time series, and deep learning, with numerous high-impact publications. 
         Notably, he developed the widely-used 
         <a href="https://github.com/thuml/Time-Series-Library" target="_blank">Time-Series-Library</a> 
         for time series modeling and benchmarking.
