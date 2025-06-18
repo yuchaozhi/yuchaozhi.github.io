@@ -27,12 +27,12 @@ permalink: /links/
 
   <div class="scholars-container">
     <div class="scholar-card">
-      <h3>Jiawei Han</h3>
-      <p class="institution">University of Illinois at Urbana-Champaign</p>
-      <p class="field">研究领域：数据挖掘、时空数据分析</p>
-      <p class="h-index">h指数：180</p>
-      <p class="description">数据挖掘领域的先驱，在时空数据挖掘方面有重要贡献</p>
-      <a href="https://scholar.google.com/citations?user=3qoGjtoAAAAJ" target="_blank" class="scholar-link">查看谷歌学术主页</a>
+      <h3>Mingsheng Long</h3>
+      <p class="institution">Tsinghua University</p>
+      <p class="field">Research Areas: Machine learning, deep learning, transfer learning, scientific machine learning</p>
+      <p class="h-index">h-index: 82</p>
+      <p class="description">Focusing on transfer learning, deep learning and computer vision research, with multiple high-quality publications in related fields</p>
+      <a href="https://scholar.google.com/citations?user=_MjXpXkAAAAJ&hl=zh-CN" target="_blank" class="scholar-link">View Google Scholar Profile</a>
     </div>
 
     <div class="scholar-card">
