@@ -46,7 +46,7 @@ permalink: /links/
       <p class="field">Research Areas: Data Mining, Spatio-temporal Data Mining, Urban Computing, COVID-19</p>
       <p class="description">
         A prominent expert in urban computing and spatiotemporal data mining.
-        Notably, he developed the widely-used <a href="https://github.com/LibCity/Bigscity-LibCity" target="_blank">Bigscity-LibCity</a>, <a href="https://github.com/BUAABIGSCity/PDFormer" target="_blank">PDFormer</a> and <a href="https://github.com/Echo-Ji/ST-SSL" target="_blank">ST-SSL</a>
+        He developed the widely-used <a href="https://github.com/LibCity/Bigscity-LibCity" target="_blank">Bigscity-LibCity</a>, <a href="https://github.com/BUAABIGSCity/PDFormer" target="_blank">PDFormer</a> and <a href="https://github.com/Echo-Ji/ST-SSL" target="_blank">ST-SSL</a>
         for traffic flow forecasting.
       </p>
       <a href="https://scholar.google.com/citations?user=qsLImx8AAAAJ&hl=zh-CN" target="_blank" class="scholar-link">View Google Scholar Profile</a>
