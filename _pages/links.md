@@ -220,7 +220,7 @@ permalink: /links/
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
   line-height: 1.6;
-  text-align: left;
+  /* text-align: left; */
 }
 
 .scholar-link {
