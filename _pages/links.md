@@ -207,7 +207,7 @@ permalink: /links/
   color: #0366d6;
   font-size: 0.9rem;
   margin: 0.5rem 0;
-  text-align: center;
+  text-align: left;
 }
 
 .description {
