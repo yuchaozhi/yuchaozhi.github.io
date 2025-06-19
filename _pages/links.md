@@ -183,6 +183,7 @@ permalink: /links/
   transition: transform 0.2s;
   background: white;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
 .scholar-card:hover {
@@ -199,12 +200,14 @@ permalink: /links/
   color: #586069;
   font-size: 0.9rem;
   margin: 0.5rem 0;
+  text-align: left;
 }
 
 .field {
   color: #0366d6;
   font-size: 0.9rem;
   margin: 0.5rem 0;
+  text-align: left;
 }
 
 .description {
@@ -217,6 +220,7 @@ permalink: /links/
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
   line-height: 1.6;
+  text-align: left;
 }
 
 .scholar-link {
@@ -226,7 +230,8 @@ permalink: /links/
   color: white;
   text-decoration: none;
   border-radius: 4px;
-  margin-top: 1rem;
+  margin: 1rem auto 0 auto;
+  text-align: center;
   transition: background-color 0.2s;
 }
 
