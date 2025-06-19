@@ -33,7 +33,7 @@ permalink: /links/
       <p class="description">
         A leading researcher in time series, and deep learning. 
         Notably, he developed the widely-used 
-        <a href="https://github.com/thuml/Time-Series-Library" target="_blank">Time-Series-Library</a> 
+        <a href="https://github.com/thuml/Time-Series-Library" target="_blank">Time-Series-Library</a> and <a href="https://github.com/thuml/OpenLTM" target="_blank">OpenLTM</a>
         for time series modeling and benchmarking.
       </p>
       <a href="https://scholar.google.com/citations?user=_MjXpXkAAAAJ&hl=zh-CN" target="_blank" class="scholar-link">View Google Scholar Profile</a>
