@@ -49,7 +49,7 @@ permalink: /links/
         Notably, he developed the widely-used <a href="https://github.com/LibCity/Bigscity-LibCity" target="_blank">Bigscity-LibCity</a>, <a href="https://github.com/BUAABIGSCity/PDFormer" target="_blank">PDFormer</a> and <a href="https://github.com/Echo-Ji/ST-SSL" target="_blank">ST-SSL</a>
         for traffic flow forecasting.
       </p>
-      <a href="https://scholar.google.com/citations?user=3qoGjtoAAAAJ" target="_blank" class="scholar-link">查看谷歌学术主页</a>
+      <a href="https://scholar.google.com/citations?user=qsLImx8AAAAJ&hl=zh-CN" target="_blank" class="scholar-link">View Google Scholar Profile</a>
     </div>
 
     <div class="scholar-card">
