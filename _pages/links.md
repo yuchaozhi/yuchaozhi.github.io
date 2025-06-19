@@ -53,11 +53,13 @@ permalink: /links/
     </div>
 
     <div class="scholar-card">
-      <h3>Hui Xiong</h3>
-      <p class="institution">Rutgers University</p>
-      <p class="field">研究领域：时空数据挖掘、城市计算</p>
-      <p class="description">专注于时空数据挖掘和城市计算研究</p>
-      <a href="https://scholar.google.com/citations?user=3qoGjtoAAAAJ" target="_blank" class="scholar-link">查看谷歌学术主页</a>
+      <h3>Huaiyu Wan</h3>
+      <p class="institution">Beijing Jiaotong University</p>
+      <p class="field">Research Areas: Spatial-Temporal Data Mining, Social Network Mining, Knowledge Graph Reasoning</p>
+      <p class="description">
+        An influential scholar in spatial-temporal data mining, he is the creator of <a href="https://github.com/Water2sea/TPGN" target="_blank">PGN</a>, a leading tool for long-range time series forecasting.
+      </p>
+      <a href="https://scholar.google.com/citations?user=T5wVWIUAAAAJ&hl=zh-CN" target="_blank" class="scholar-link">View Google Scholar Profile</a>
     </div>
 
     <div class="scholar-card">
