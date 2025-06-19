@@ -200,14 +200,14 @@ permalink: /links/
   color: #586069;
   font-size: 0.9rem;
   margin: 0.5rem 0;
-  text-align: left;
+  text-align: center;
 }
 
 .field {
   color: #0366d6;
   font-size: 0.9rem;
   margin: 0.5rem 0;
-  text-align: left;
+  text-align: center;
 }
 
 .description {
