@@ -183,10 +183,6 @@ permalink: /links/
   transition: transform 0.2s;
   background: white;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  min-height: 260px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .scholar-card:hover {
@@ -195,9 +191,8 @@ permalink: /links/
 }
 
 .scholar-card h3 {
-  font-weight: bold;
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
+  margin: 0.5rem 0;
+  color: #24292e;
 }
 
 .institution {
@@ -213,16 +208,19 @@ permalink: /links/
 }
 
 .description {
-  color: #333;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  color: #24292e;
   margin: 1rem 0;
-  flex-grow: 1;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  line-height: 1.6;
 }
 
 .scholar-link {
-  display: flex;
-  align-items: center;
-  gap: 6px;
+  display: inline-block;
   padding: 0.5rem 1rem;
   background-color: #0366d6;
   color: white;
