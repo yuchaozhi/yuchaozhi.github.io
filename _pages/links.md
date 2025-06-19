@@ -41,10 +41,14 @@ permalink: /links/
 
 
     <div class="scholar-card">
-      <h3>Philip S. Yu</h3>
-      <p class="institution">University of Illinois at Chicago</p>
-      <p class="field">研究领域：大数据挖掘、时空数据分析</p>
-      <p class="description">大数据挖掘和时空数据分析领域的权威专家</p>
+      <h3>Jingyuan Wang</h3>
+      <p class="institution">Beihang University</p>
+      <p class="field">Research Areas: Data Mining, Spatio-temporal Data Mining, Urban Computing, COVID-19</p>
+      <p class="description">
+        A leading researcher in Spatio-temporal Data Mining, and Urban Computing. 
+        Notably, he developed the widely-used <a href="https://github.com/LibCity/Bigscity-LibCity" target="_blank">Bigscity-LibCity</a>, <a href="https://github.com/BUAABIGSCity/PDFormer" target="_blank">PDFormer</a> and <a href="https://github.com/Echo-Ji/ST-SSL" target="_blank">ST-SSL</a>
+        for traffic flow forecasting.
+      </p>
       <a href="https://scholar.google.com/citations?user=3qoGjtoAAAAJ" target="_blank" class="scholar-link">查看谷歌学术主页</a>
     </div>
 
@@ -220,7 +224,6 @@ permalink: /links/
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
   line-height: 1.6;
-  /* text-align: left; */
 }
 
 .scholar-link {
