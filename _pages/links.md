@@ -39,7 +39,6 @@ permalink: /links/
       <a href="https://scholar.google.com/citations?user=_MjXpXkAAAAJ&hl=zh-CN" target="_blank" class="scholar-link">View Google Scholar Profile</a>
     </div>
 
-
     <div class="scholar-card">
       <h3>Jingyuan Wang</h3>
       <p class="institution">Beihang University</p>
@@ -63,11 +62,13 @@ permalink: /links/
     </div>
 
     <div class="scholar-card">
-      <h3>Yu Zheng</h3>
-      <p class="institution">JD.com</p>
-      <p class="field">研究领域：城市计算、时空数据挖掘</p>
-      <p class="description">城市计算领域的开创者，时空数据挖掘专家</p>
-      <a href="https://scholar.google.com/citations?user=3qoGjtoAAAAJ" target="_blank" class="scholar-link">查看谷歌学术主页</a>
+      <h3>Yang Wang</h3>
+      <p class="institution">University of Science and Technology of China</p>
+      <p class="field">Research Areas: Artificial intelligence, Wireless Network, Distributed System, Big Data</p>
+      <p class="description">
+        Renowned in the big data community, he create <a href="https://github.com/hqh0728/TimeBase" target="blank">TimeBase</a>, a pioneering solution for time series forecasting.
+      </p>
+      <a href="https://scholar.google.com/citations?user=RJj2XXUAAAAJ&hl=zh" target="_blank" class="scholar-link">View Google Scholar Profile</a>
     </div>
 
     <div class="scholar-card">
