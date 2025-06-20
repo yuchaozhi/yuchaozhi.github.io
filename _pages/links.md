@@ -66,7 +66,7 @@ permalink: /links/
       <p class="institution">University of Science and Technology of China</p>
       <p class="field">Research Areas: Artificial intelligence, Wireless Network, Distributed System, Big Data</p>
       <p class="description">
-        Focusing on spatiotemporal data mining and graph representation learning, he create <a href="https://github.com/hqh0728/TimeBase" target="blank">TimeBase</a>, a pioneering solution for time series forecasting.
+        As the founder of the <a href="https://di.ustc.edu.cn/main.htm" target="blank">Data Intelligence Laboratory</a>, he create <a href="https://github.com/hqh0728/TimeBase" target="blank">TimeBase</a>, a pioneering solution for time series forecasting.
       </p>
       <a href="https://scholar.google.com/citations?user=RJj2XXUAAAAJ&hl=zh" target="_blank" class="scholar-link">View Google Scholar Profile</a>
     </div>
