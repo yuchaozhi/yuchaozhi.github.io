@@ -83,7 +83,7 @@ permalink: /links/
 
     <div class="scholar-card">
       <h3>Yuxuan Liang</h3>
-      <p class="institution">Hong Kong University of Science and Technology (Guangzhou)</p>
+      <p class="institution">Hong Kong University of Science and Technology</p>
       <p class="field">Research Areas: Spatio-Temporal Data Mining, Urban Computing, Urban AI, Foundation Models, Time Series</p>
       <p class="description">
         An influential scholar in spatial-temporal data mining and time series, he is the creator of <a href="https://github.com/CityMind-Lab/ICML25-TimeVLM" target="_blank">TimeVLM</a>, a leading tool for augmented time series forecasting.
