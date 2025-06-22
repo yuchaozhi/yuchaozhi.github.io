@@ -72,11 +72,13 @@ permalink: /links/
     </div>
 
     <div class="scholar-card">
-      <h3>Xiaofang Zhou</h3>
-      <p class="institution">University of Queensland</p>
-      <p class="field">研究领域：时空数据管理、数据挖掘</p>
-      <p class="description">时空数据管理和挖掘领域的知名学者</p>
-      <a href="https://scholar.google.com/citations?user=3qoGjtoAAAAJ" target="_blank" class="scholar-link">查看谷歌学术主页</a>
+      <h3>Kai Zheng</h3>
+      <p class="institution">University of Electronic Science and Technology of China</p>
+      <p class="field">Research Areas: Spatio-temporal DatabasesSpatial CrowdsourcingAI4DBAutonomous DrivingRecommendation Systems</p>
+      <p class="description">
+        A leading researcher in spatio-temporal databases, who gave a comprehensive review of <a href="https://github.com/LMissher/Awesome-Spatio-Temporal-Foundation-Models" target="_blank">Spatio-Temporal Foundation Models</a>, proposed <a href="https://github.com/LMissher/PatchSTG" target="_blank">PatchSTG</a> for large-scale traffic forecasting, and created <a href="https://github.com/LMissher/STWave" target="_blank">STWave</a>.
+      </p>
+      <a href="https://scholar.google.co.kr/citations?user=EM-l50cAAAAJ&hl=zh-CN" target="_blank" class="scholar-link">View Google Scholar Profile</a>
     </div>
 
     <div class="scholar-card">
