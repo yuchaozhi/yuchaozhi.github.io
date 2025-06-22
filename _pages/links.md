@@ -82,43 +82,13 @@ permalink: /links/
     </div>
 
     <div class="scholar-card">
-      <h3>Jian Pei</h3>
-      <p class="institution">Simon Fraser University</p>
-      <p class="field">研究领域：数据挖掘、时空数据分析</p>
-      <p class="description">数据挖掘和时空数据分析专家</p>
-      <a href="https://scholar.google.com/citations?user=3qoGjtoAAAAJ" target="_blank" class="scholar-link">查看谷歌学术主页</a>
-    </div>
-
-    <div class="scholar-card">
-      <h3>Wei Wang</h3>
-      <p class="institution">University of California, Los Angeles</p>
-      <p class="field">研究领域：时空数据挖掘、大数据分析</p>
-      <p class="description">专注于时空数据挖掘和大数据分析研究</p>
-      <a href="https://scholar.google.com/citations?user=3qoGjtoAAAAJ" target="_blank" class="scholar-link">查看谷歌学术主页</a>
-    </div>
-
-    <div class="scholar-card">
-      <h3>Jianzhong Li</h3>
-      <p class="institution">Harbin Institute of Technology</p>
-      <p class="field">研究领域：时空数据管理、数据挖掘</p>
-      <p class="description">时空数据管理和挖掘领域的专家</p>
-      <a href="https://scholar.google.com/citations?user=3qoGjtoAAAAJ" target="_blank" class="scholar-link">查看谷歌学术主页</a>
-    </div>
-
-    <div class="scholar-card">
-      <h3>Xiaokui Xiao</h3>
-      <p class="institution">National University of Singapore</p>
-      <p class="field">研究领域：时空数据隐私、数据挖掘</p>
-      <p class="description">专注于时空数据隐私保护研究</p>
-      <a href="https://scholar.google.com/citations?user=3qoGjtoAAAAJ" target="_blank" class="scholar-link">查看谷歌学术主页</a>
-    </div>
-
-    <div class="scholar-card">
-      <h3>Yan Huang</h3>
-      <p class="institution">University of North Texas</p>
-      <p class="field">研究领域：时空数据挖掘、移动计算</p>
-      <p class="description">时空数据挖掘和移动计算领域的研究者</p>
-      <a href="https://scholar.google.com/citations?user=3qoGjtoAAAAJ" target="_blank" class="scholar-link">查看谷歌学术主页</a>
+      <h3>Yuxuan Liang</h3>
+      <p class="institution">Hong Kong University of Science and Technology (Guangzhou)</p>
+      <p class="field">Research Areas: Spatio-Temporal Data Mining, Urban Computing, Urban AI, Foundation Models, Time Series</p>
+      <p class="description">
+        An influential scholar in spatial-temporal data mining and time series, he is the creator of <a href="https://github.com/CityMind-Lab/ICML25-TimeVLM" target="_blank">TimeVLM</a>, a leading tool for augmented time series forecasting.
+      </p>
+      <a href="https://scholar.google.com/citations?user=n9cODgcAAAAJ&hl=zh" target="_blank" class="scholar-link">View Google Scholar Profile</a>
     </div>
   </div>
 </div>
