@@ -74,7 +74,7 @@ permalink: /links/
     <div class="scholar-card">
       <h3>Kai Zheng</h3>
       <p class="institution">UESTC</p>
-      <p class="field">Research Areas: Spatio-temporal Databases, Spatial Crowdsourcing, AI4DB</p>
+      <p class="field">Research Areas: Spatio-temporal Databases, AI4DB, Spatial Crowdsourcing</p>
       <p class="description">
         As a leading researcher in spatio-temporal databases, he gave a comprehensive review of <a href="https://github.com/LMissher/Awesome-Spatio-Temporal-Foundation-Models" target="_blank">Spatio-Temporal Foundation Models</a>, proposed <a href="https://github.com/LMissher/PatchSTG" target="_blank">PatchSTG</a> for large-scale traffic forecasting, and created <a href="https://github.com/LMissher/STWave" target="_blank">STWave</a>.
       </p>
