@@ -48,7 +48,7 @@ permalink: /links/
         He developed the widely-used <a href="https://github.com/LibCity/Bigscity-LibCity" target="_blank">Bigscity-LibCity</a>, <a href="https://github.com/BUAABIGSCity/PDFormer" target="_blank">PDFormer</a> and <a href="https://github.com/Echo-Ji/ST-SSL" target="_blank">ST-SSL</a>
         for traffic flow forecasting.
       </p>
-      <a href="https://scholar.google.com/citations?user=qsLImx8AAAAJ&hl=zh-CN" target="_blank" class="scholar-link">View Google Scholar Profile</a>
+      <a href="https://scholar.google.com/citations?user=qsLImx8AAAAJ&hl=zh" target="_blank" class="scholar-link">View Google Scholar Profile</a>
     </div>
 
     <div class="scholar-card">
@@ -58,7 +58,7 @@ permalink: /links/
       <p class="description">
         An influential scholar in spatial-temporal data mining, he is the creator of <a href="https://github.com/Water2sea/TPGN" target="_blank">PGN</a>, a leading tool for long-range time series forecasting.
       </p>
-      <a href="https://scholar.google.com/citations?user=T5wVWIUAAAAJ&hl=zh-CN" target="_blank" class="scholar-link">View Google Scholar Profile</a>
+      <a href="https://scholar.google.com/citations?user=T5wVWIUAAAAJ&hl=zh" target="_blank" class="scholar-link">View Google Scholar Profile</a>
     </div>
 
     <div class="scholar-card">
@@ -78,7 +78,7 @@ permalink: /links/
       <p class="description">
         As a leading researcher in spatio-temporal databases, he gave a comprehensive review of <a href="https://github.com/LMissher/Awesome-Spatio-Temporal-Foundation-Models" target="_blank">Spatio-Temporal Foundation Models</a>, proposed <a href="https://github.com/LMissher/PatchSTG" target="_blank">PatchSTG</a> for large-scale traffic forecasting, and created <a href="https://github.com/LMissher/STWave" target="_blank">STWave</a>.
       </p>
-      <a href="https://scholar.google.co.kr/citations?user=EM-l50cAAAAJ&hl=zh-CN" target="_blank" class="scholar-link">View Google Scholar Profile</a>
+      <a href="https://scholar.google.co.kr/citations?user=EM-l50cAAAAJ&hl=zh" target="_blank" class="scholar-link">View Google Scholar Profile</a>
     </div>
 
     <div class="scholar-card">
@@ -89,6 +89,16 @@ permalink: /links/
         An influential scholar in spatial-temporal data mining and time series, he is the creator of <a href="https://github.com/CityMind-Lab/ICML25-TimeVLM" target="_blank">TimeVLM</a>, a leading tool for augmented time series forecasting.
       </p>
       <a href="https://scholar.google.com/citations?user=n9cODgcAAAAJ&hl=zh" target="_blank" class="scholar-link">View Google Scholar Profile</a>
+    </div>
+
+    <div class="scholar-card">
+      <h3>Fei Wang</h3>
+      <p class="institution">Institute of Computing Technology, Chinese Academy of Sciences</p>
+      <p class="field">Research Areas: Spatial-Temporal Data Mining, Time Series Forecasting, Time Series Analysis, AI for Science</p>
+      <p class="description">
+        Leader of <a href="https://github.com/GestaltCogTeam" target="_blank">GestaltCog Lab</a>, with many outstanding open-source projects such as <a href="https://github.com/ChengqingYu/Merlin" target="_blank">Merlin</a>, <a href="https://github.com/GestaltCogTeam/BLAST" target="_blank">BLAST</a>, and <a href="https://github.com/GestaltCogTeam/BasicTS" target="_blank">BasicTS<sup>+</sup></a>. The team also includes <a href="https://scholar.google.com/citations?user=-9_KI-wAAAAJ&hl=zh" target="_blank">Zezhi Shao</a> and <a href="https://scholar.google.com/citations?user=G3vphfgAAAAJ&hl=zh" target="_blank">Chengqing Yu</a>.
+      </p>
+      <a href="https://scholar.google.com/citations?user=MuEc_JEAAAAJ&hl=zh" target="_blank" class="scholar-link">View Google Scholar Profile</a>
     </div>
   </div>
 </div>
