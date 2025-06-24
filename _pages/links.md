@@ -100,6 +100,16 @@ permalink: /links/
       </p>
       <a href="https://scholar.google.com/citations?user=MuEc_JEAAAAJ&hl=zh" target="_blank" class="scholar-link">View Google Scholar Profile</a>
     </div>
+
+    <div class="scholar-card">
+      <h3>Bin Yang</h3>
+      <p class="institution">East China Normal University</p>
+      <p class="field">Research Areas: Spatial-Temporal Data Mining, Time Series Forecasting, Time Series Analysis, AI for Science</p>
+      <p class="description">
+        Director of the <a href="https://decisionintelligence.github.io/index" target="_blank">Decision Intelligence Lab</a>, with several notable open-source projects such as <a href="https://github.com/decisionintelligence/TFB" target="_blank">TFB</a>, <a href="https://github.com/decisionintelligence/DUET" target="_blank">DUET</a>, <a href="https://github.com/decisionintelligence/pathformer" target="_blank">Pathformer</a>, <a href="https://github.com/decisionintelligence/ADFormer" target="_blank">ADFormer</a>, <a href="https://github.com/decisionintelligence/K2VAE" target="_blank">K2VAE</a> and <a href="https://github.com/decisionintelligence/CATCH" target="_blank">CATCH</a>. The core members of the team include <a href="https://scholar.google.com/citations?user=WMXNm88AAAAJ&hl=zh" target="_blank">Chenjuan Guo</a> and <a href="https://scholar.google.com/citations?user=6eSvRMkAAAAJ&hl=zh" target="_blank">Jilin Hu</a>.
+      </p>
+      <a href="https://scholar.google.com/citations?user=qjBQhoUAAAAJ&hl=zh" target="_blank" class="scholar-link">View Google Scholar Profile</a>
+    </div>
   </div>
 </div>
 
