@@ -135,8 +135,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-<a href="https://ktczkxbjp8.feishu.cn/docx/MdLgdn9ERoMPCKx9DqScObnwnef" target="_blank" class="feishu-float-btn">
-  <img src="/images/feishu.png" style="height:1.2em;vertical-align:middle;margin-right:6px;">飞书文档
+<a href="https://ktczkxbjp8.feishu.cn/docx/MdLgdn9ERoMPCKx9DqScObnwnef" target="_blank" class="feishu-float-btn" title="飞书文档">
+  <img src="/images/feishu.png" alt="飞书文档">
 </a>
 
 <style>
@@ -267,19 +267,27 @@ document.addEventListener('DOMContentLoaded', function() {
   position: fixed;
   right: 32px;
   bottom: 32px;
-  background: #4e83f1;
-  color: #fff;
-  padding: 12px 24px;
-  border-radius: 32px;
+  background: #fff;
+  color: #4e83f1;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
   box-shadow: 0 4px 16px rgba(78,131,241,0.18);
-  font-size: 16px;
   z-index: 999;
   text-decoration: none;
   display: flex;
   align-items: center;
-  transition: background 0.2s;
+  justify-content: center;
+  transition: box-shadow 0.2s, background 0.2s;
+  border: 2px solid #4e83f1;
 }
 .feishu-float-btn:hover {
-  background: #3461b3;
+  background: #eaf2ff;
+  box-shadow: 0 6px 24px rgba(78,131,241,0.28);
+}
+.feishu-float-btn img {
+  height: 2.4em;
+  width: 2.4em;
+  display: block;
 }
 </style> 
