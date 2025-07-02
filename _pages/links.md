@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <a href="https://ktczkxbjp8.feishu.cn/docx/MdLgdn9ERoMPCKx9DqScObnwnef" target="_blank" class="feishu-float-btn">
-  <img src="/images/feishu-icon.png" style="height:1.2em;vertical-align:middle;margin-right:6px;">飞书文档
+  <img src="https://sf3-fe-tos.pglstatp-toutiao.com/obj/feishu-static/feishu_logo_icon_64px.png" style="height:1.2em;vertical-align:middle;margin-right:6px;">飞书文档
 </a>
 
 <style>
