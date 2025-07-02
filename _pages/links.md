@@ -113,6 +113,32 @@ permalink: /links/
   </div>
 </div>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // 预加载其他页面
+  var links = document.querySelectorAll('nav a');
+  links.forEach(function(link) {
+    var prefetchLink = document.createElement('link');
+    prefetchLink.rel = 'prefetch';
+    prefetchLink.href = link.href;
+    document.head.appendChild(prefetchLink);
+  });
+  
+  // 确保favicon加载
+  if (!document.querySelector("link[rel='icon']")) {
+    var favicon = document.createElement('link');
+    favicon.rel = 'icon';
+    favicon.type = 'image/x-icon';
+    favicon.href = '/images/favicon.ico';
+    document.head.appendChild(favicon);
+  }
+});
+</script>
+
+<a href="https://ktczkxbjp8.feishu.cn/docx/MdLgdn9ERoMPCKx9DqScObnwnef" target="_blank" class="feishu-float-btn">
+  <img src="/images/feishu-icon.png" style="height:1.2em;vertical-align:middle;margin-right:6px;">飞书文档
+</a>
+
 <style>
 /* 页面建设中横幅样式 */
 .construction-banner {
@@ -236,26 +262,24 @@ permalink: /links/
 .scholar-link:hover {
   background-color: #0256b3;
 }
-</style>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // 预加载其他页面
-  var links = document.querySelectorAll('nav a');
-  links.forEach(function(link) {
-    var prefetchLink = document.createElement('link');
-    prefetchLink.rel = 'prefetch';
-    prefetchLink.href = link.href;
-    document.head.appendChild(prefetchLink);
-  });
-  
-  // 确保favicon加载
-  if (!document.querySelector("link[rel='icon']")) {
-    var favicon = document.createElement('link');
-    favicon.rel = 'icon';
-    favicon.type = 'image/x-icon';
-    favicon.href = '/images/favicon.ico';
-    document.head.appendChild(favicon);
-  }
-});
-</script> 
+.feishu-float-btn {
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  background: #4e83f1;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 32px;
+  box-shadow: 0 4px 16px rgba(78,131,241,0.18);
+  font-size: 16px;
+  z-index: 999;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: background 0.2s;
+}
+.feishu-float-btn:hover {
+  background: #3461b3;
+}
+</style> 
