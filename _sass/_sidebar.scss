@@ -111,6 +111,7 @@
   min-width: 180px;
   // padding-right: 25px;
   line-height: 1;
+  text-align: left;
 
   @include breakpoint($large) {
     display: block;
@@ -145,7 +146,9 @@
 
 .author__bio {
   margin: 0;
-  text-align: center;
+  text-align: center !important;
+  display: block;
+  width: 100%;
 
   @include breakpoint($large) {
     margin-top: 10px;
