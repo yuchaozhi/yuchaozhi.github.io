@@ -12,8 +12,8 @@
 - *2020.12*, Non-autoregressive Speech Synthesis, Huawei Noah's Ark Lab internal talk
 -->
 
-# 💻 Internships
+<!-- # 💻 Internships
 
 - *2024.10 - 2025.03*, ByteDance × Doubao MarsCode, AI、Big Data Youth Training Camp.
 - *2024.06 - 2024.07*, China Mobile 2024 IT New Technology Training Camp, Artificial Intelligence.
-- *2024.03 - 2024.06*, Borei Public Relations Research Center, Algorithm Engineer.
+- *2024.03 - 2024.06*, Borei Public Relations Research Center, Algorithm Engineer. -->
