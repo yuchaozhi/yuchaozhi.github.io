@@ -10,7 +10,7 @@ redirect_from:
 <span class='anchor' id='about-me'></span>
 {% include_relative includes/intro.md %}
 
-If you like the template of this homepage, welcome to star and fork my open-sourced [personal homepage template](https://github.com/yuchaozhi/yuchaozhi.github.io).
+<!-- If you like the template of this homepage, welcome to star and fork my open-sourced [personal homepage template](https://github.com/yuchaozhi/yuchaozhi.github.io). -->
 
 {% include_relative includes/news.md %}
 
