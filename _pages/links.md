@@ -12,12 +12,7 @@ permalink: /links/
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 </head>
 
-<!-- 页面建设中提示横幅 -->
-<div class="construction-banner">
-  <span class="construction-icon">🚧</span>
-  <span class="construction-text">页面建设中</span>
-  <span class="construction-icon">🚧</span>
-</div>
+
 
 <div class="links-container">
   <div class="link-card">
@@ -140,34 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </a>
 
 <style>
-/* 页面建设中横幅样式 */
-.construction-banner {
-  background-color: #ffe57f;
-  color: #6b5900;
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 30px;
-  border-radius: 8px;
-  font-size: 20px;
-  font-weight: bold;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  animation: pulse 2s infinite;
-}
 
-.construction-icon {
-  font-size: 24px;
-  margin: 0 10px;
-}
-
-.construction-text {
-  letter-spacing: 2px;
-}
-
-@keyframes pulse {
-  0% { opacity: 0.8; }
-  50% { opacity: 1; }
-  100% { opacity: 0.8; }
-}
 
 .links-container {
   max-width: 1200px;
