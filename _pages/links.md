@@ -16,8 +16,8 @@ permalink: /links/
 
 <div class="links-container">
   <div class="link-card">
-    <h2>时空数据挖掘领域学者</h2>
-    <p>这里收集了时空数据挖掘领域的顶尖学者信息，包括他们的研究领域、学术成就等。</p>
+    <h2>Scholar in Spatiotemporal Data Mining</h2>
+    <p>We have compiled information on several leading scholars in the field of spatiotemporal data mining, including their research areas, academic contributions, and key achievements.</p>
   </div>
 
   <div class="scholars-container">
