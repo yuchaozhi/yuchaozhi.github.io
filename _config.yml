@@ -145,6 +145,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-redirect-from
+  - bibtex_filter
 # mimic GitHub Pages with --safe
 whitelist:
   - jekyll-paginate
