@@ -64,4 +64,86 @@ function copyBibtex(id) {
   // Remove the temporary textarea
   document.body.removeChild(textarea);
 }
+
+// BibTeX database
+var bibtexDatabase = {
+  "yu2025multi": `@article{yu2025multi,
+  title={Multi-Scale Cross-Dimensional Attention Network for Gland Segmentation},
+  author={Yu, Chaozhi and Cheng, Hongnan and Huang, Yufei and Lin, Zhizhe and Zhou, Teng},
+  journal={IEEE Signal Processing Letters},
+  volume={32},
+  pages={3365--3369},
+  year={2025},
+  publisher={IEEE}
+}`,
+  "cheng2025segmentation": `@article{cheng2025segmentation,
+  title={Segmentation of IC Images in Integrated Circuit Reverse Engineering Using EfficientNet Encoder Based on U-Net++ Architecture},
+  author={Cheng, Hongnan and Yu, Chaozhi and Zhang, Chenguang},
+  journal={International Journal of Circuit Theory and Applications},
+  year={2025},
+  publisher={Wiley Online Library}
+}`,
+  "xu2025enhancing": `@inproceedings{xu2025enhancing,
+  title={Enhancing Stock Price Prediction with GLTCN: A Hybrid Model for Complex Market Dynamics},
+  author={Xu, Yudi and Yu, Chaozhi and Cheng, Hongnan and Wu, Yulai},
+  booktitle={ACM International Conference on Electronic Information Technology and Computer Engineering},
+  year={2025},
+  note={In Production}
+}`,
+  "cheng2025denoising": `@inproceedings{cheng2025denoising,
+  title={A Denoising and Structured Segmentation Method for IC Images via Integration of YOLOv5 and Lightweight Unet},
+  author={Cheng, Hongnan and Yu, Chaozhi and Yang, Zhiyuan and Zhang, Chenguang},
+  booktitle={IEEE International Conference on Computer Applications in Information and Big Data Analytics},
+  year={2025},
+  note={In Production}
+}`
+};
+
+// Process \cite{} references when page loads
+document.addEventListener('DOMContentLoaded', function() {
+  // Find all text nodes containing \cite{...}
+  var walker = document.createTreeWalker(
+    document.body,
+    NodeFilter.SHOW_TEXT,
+    null,
+    false
+  );
+  
+  var textNodes = [];
+  var node;
+  while (node = walker.nextNode()) {
+    if (node.textContent.includes('\\cite{')) {
+      textNodes.push(node);
+    }
+  }
+  
+  // Process each text node
+  textNodes.forEach(function(textNode) {
+    var text = textNode.textContent;
+    var parent = textNode.parentNode;
+    
+    // Replace \cite{key} with BibTeX button
+    var citeRegex = /\\cite\{([^}]+)\}/g;
+    var newHTML = text.replace(citeRegex, function(match, key) {
+      if (bibtexDatabase[key]) {
+        var uniqueId = 'bibtex-' + key + '-' + Math.random().toString(36).substr(2, 9);
+        return '<button class="bibtex-btn" onclick="toggleBibtex(\'' + uniqueId + '\')">BibTeX</button>' +
+               '<div id="' + uniqueId + '" class="bibtex-content" style="display: none;">' +
+               '<pre>' + bibtexDatabase[key] + '</pre>' +
+               '<button class="copy-btn" onclick="copyBibtex(\'' + uniqueId + '\')">复制</button>' +
+               '</div>';
+      }
+      return match; // Keep original if key not found
+    });
+    
+    if (newHTML !== text) {
+      var tempDiv = document.createElement('div');
+      tempDiv.innerHTML = newHTML;
+      while (tempDiv.firstChild) {
+        parent.insertBefore(tempDiv.firstChild, textNode);
+      }
+      parent.removeChild(textNode);
+    }
+  });
+});
 </script>
