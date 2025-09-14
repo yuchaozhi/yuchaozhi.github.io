@@ -95,4 +95,50 @@ $(document).ready(function(){
     midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
   });
 
+  // BibTeX functionality
+  window.toggleBibtex = function(id) {
+    var content = document.getElementById(id);
+    if (content.style.display === 'none') {
+      content.style.display = 'block';
+    } else {
+      content.style.display = 'none';
+    }
+  };
+
+  window.copyBibtex = function(id) {
+    var content = document.getElementById(id);
+    var pre = content.querySelector('pre');
+    var text = pre.textContent;
+    
+    // Create a temporary textarea element
+    var textarea = document.createElement('textarea');
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    
+    try {
+      // Copy the text to clipboard
+      document.execCommand('copy');
+      
+      // Show feedback to user
+      var copyBtn = content.querySelector('.copy-btn');
+      var originalText = copyBtn.textContent;
+      copyBtn.textContent = '已复制!';
+      copyBtn.style.backgroundColor = '#6c757d';
+      
+      // Reset button after 2 seconds
+      setTimeout(function() {
+        copyBtn.textContent = originalText;
+        copyBtn.style.backgroundColor = '#28a745';
+      }, 2000);
+      
+    } catch (err) {
+      console.error('Failed to copy text: ', err);
+      alert('复制失败，请手动复制');
+    }
+    
+    // Remove the temporary textarea
+    document.body.removeChild(textarea);
+  };
+
 });

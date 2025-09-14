@@ -120,3 +120,63 @@ h1:before, .anchor:before {
   line-height: 1.5;
   margin-bottom: 1em;
 }
+
+/* BibTeX Button and Content Styles */
+.bibtex-btn {
+  background-color: #007acc;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  margin-left: 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bibtex-btn:hover {
+  background-color: #005a9e;
+}
+
+.bibtex-content {
+  margin-top: 10px;
+  margin-left: 20px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 5px;
+  position: relative;
+}
+
+.bibtex-content pre {
+  background-color: #2d3748;
+  color: #e2e8f0;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 13px;
+  line-height: 1.4;
+  margin: 0 0 10px 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.copy-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 3px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.copy-btn:hover {
+  background-color: #218838;
+}
+
+.copy-btn:active {
+  background-color: #1e7e34;
+}
