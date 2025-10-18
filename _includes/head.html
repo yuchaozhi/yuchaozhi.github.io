@@ -65,9 +65,87 @@ function copyBibtex(id) {
   document.body.removeChild(textarea);
 }
 
-// BibTeX database
-var bibtexDatabase = {
-  "yu2025multi": `@article{yu2025multi,
+// BibTeX database - 从 reference.bib 文件动态加载
+var bibtexDatabase = {};
+
+// 解析 BibTeX 条目的函数
+function parseBibtexEntry(text) {
+  var lines = text.split('\n');
+  var result = {};
+  var currentField = '';
+  var currentValue = '';
+  var inValue = false;
+  
+  for (var i = 0; i < lines.length; i++) {
+    var line = lines[i].trim();
+    
+    if (line === '') continue;
+    
+    // 处理字段定义
+    var fieldMatch = line.match(/^(\w+)\s*=\s*\{?(.+?)\}?\,?$/);
+    if (fieldMatch) {
+      var fieldName = fieldMatch[1];
+      var fieldValue = fieldMatch[2];
+      result[fieldName] = fieldValue;
+    }
+  }
+  
+  return result;
+}
+
+// 从 reference.bib 文件加载 BibTeX 数据
+function loadBibtexFromFile() {
+  fetch('/reference.bib')
+    .then(response => response.text())
+    .then(data => {
+      // 解析 BibTeX 文件
+      var entries = data.split(/@\w+\{/);
+      
+      for (var i = 1; i < entries.length; i++) {
+        var entry = entries[i];
+        var keyMatch = entry.match(/^([^,]+),/);
+        if (keyMatch) {
+          var key = keyMatch[1].trim();
+          var fields = {};
+          
+          // 提取各个字段
+          var fieldMatches = entry.match(/(\w+)\s*=\s*\{([^}]+)\}/g);
+          if (fieldMatches) {
+            fieldMatches.forEach(function(match) {
+              var fieldMatch = match.match(/(\w+)\s*=\s*\{([^}]+)\}/);
+              if (fieldMatch) {
+                fields[fieldMatch[1]] = fieldMatch[2];
+              }
+            });
+          }
+          
+          // 重建 BibTeX 字符串
+          var bibtexStr = '@' + entries[i-1].match(/@(\w+)\{/)[1] + '{' + key + ',\n';
+          for (var fieldName in fields) {
+            bibtexStr += '  ' + fieldName + '={' + fields[fieldName] + '},\n';
+          }
+          bibtexStr += '}';
+          
+          bibtexDatabase[key] = bibtexStr;
+        }
+      }
+      
+      console.log('BibTeX 数据加载完成，共加载 ' + Object.keys(bibtexDatabase).length + ' 条条目');
+      
+      // 重新处理页面上的引用
+      processCitations();
+    })
+    .catch(error => {
+      console.error('加载 reference.bib 文件失败:', error);
+      // 如果加载失败，使用备用数据
+      loadFallbackBibtex();
+    });
+}
+
+// 备用 BibTeX 数据（当文件加载失败时使用）
+function loadFallbackBibtex() {
+  bibtexDatabase = {
+    "yu2025multi": `@article{yu2025multi,
   title={Multi-Scale Cross-Dimensional Attention Network for Gland Segmentation},
   author={Yu, Chaozhi and Cheng, Hongnan and Huang, Yufei and Lin, Zhizhe and Zhou, Teng},
   journal={IEEE Signal Processing Letters},
@@ -76,31 +154,42 @@ var bibtexDatabase = {
   year={2025},
   publisher={IEEE}
 }`,
-  "cheng2025segmentation": `@article{cheng2025segmentation,
+    "cheng2025segmentation": `@article{cheng2025segmentation,
   title={Segmentation of IC Images in Integrated Circuit Reverse Engineering Using EfficientNet Encoder Based on U-Net++ Architecture},
   author={Cheng, Hongnan and Yu, Chaozhi and Zhang, Chenguang},
   journal={International Journal of Circuit Theory and Applications},
   year={2025},
   publisher={Wiley Online Library}
 }`,
-  "xu2025enhancing": `@inproceedings{xu2025enhancing,
+    "xu2025enhancing": `@inproceedings{xu2025enhancing,
   title={Enhancing Stock Price Prediction with GLTCN: A Hybrid Model for Complex Market Dynamics},
   author={Xu, Yudi and Yu, Chaozhi and Cheng, Hongnan and Wu, Yulai},
   booktitle={ACM International Conference on Electronic Information Technology and Computer Engineering},
   year={2025},
   note={In Production}
 }`,
-  "cheng2025denoising": `@inproceedings{cheng2025denoising,
+    "cheng2025denoising": `@inproceedings{cheng2025denoising,
   title={A Denoising and Structured Segmentation Method for IC Images via Integration of YOLOv5 and Lightweight Unet},
   author={Cheng, Hongnan and Yu, Chaozhi and Yang, Zhiyuan and Zhang, Chenguang},
-  booktitle={IEEE International Conference on Computer Applications in Information and Big Data Analytics},
+  booktitle={2025 5th International Conference on Artificial Intelligence, Big Data and Algorithms (CAIBDA)},
+  pages={319--322},
   year={2025},
-  note={In Production}
+  organization={IEEE}
 }`
-};
+  };
+  
+  console.log('使用备用 BibTeX 数据');
+  processCitations();
+}
 
 // Process \cite{} references when page loads
 document.addEventListener('DOMContentLoaded', function() {
+  // 首先尝试从 reference.bib 文件加载数据
+  loadBibtexFromFile();
+});
+
+// 处理引用的函数
+function processCitations() {
   // Find all text nodes containing \cite{...}
   var walker = document.createTreeWalker(
     document.body,
@@ -145,5 +234,5 @@ document.addEventListener('DOMContentLoaded', function() {
       parent.removeChild(textNode);
     }
   });
-});
+}
 </script>
