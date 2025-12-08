@@ -4,11 +4,11 @@
 
 <!-- #### 🌍Spatiotemporal Data Mining -->
 
-- ``IEEE TCE`` **Chaozhi Yu**, Zhizhe Lin, Hongnan Cheng, Chunjie Cao, Teng Zhou, Man-Fai Leung. Quantum-Inspired Dynamic Spatiotemporal Matching Transformer for Traffic Flow Forecasting. ***IEEE Transactions on Consumer Electronics***. 2025. Accept. [SCI Q1, 中科院二区]
+- ``IEEE TCE`` **Chaozhi Yu**, Zhizhe Lin, Hongnan Cheng, Chunjie Cao, Teng Zhou, Man-Fai Leung. Quantum-Inspired Dynamic Spatiotemporal Matching Transformer for Traffic Flow Forecasting. ***IEEE Transactions on Consumer Electronics***. 2025. Accept. [SCI Q1, 中科院二区, IF 10.9]
 
-- ``IEEE SPL`` **Chaozhi Yu**, Hongnan Cheng, Yufei Huang, Zhizhe Lin, Teng Zhou. Multi-Scale Cross-Dimensional Attention Network for Gland Segmentation. ***IEEE Signal Processing Letters***. 2025. [https://doi.org/10.1109/LSP.2025.3600374](https://doi.org/10.1109/LSP.2025.3600374) [SCI Q2, 中科院三区] \cite{yu2025multi}
+- ``IEEE SPL`` **Chaozhi Yu**, Hongnan Cheng, Yufei Huang, Zhizhe Lin, Teng Zhou. Multi-Scale Cross-Dimensional Attention Network for Gland Segmentation. ***IEEE Signal Processing Letters***. 2025. [https://doi.org/10.1109/LSP.2025.3600374](https://doi.org/10.1109/LSP.2025.3600374) [SCI Q2, 中科院三区, IF 3.9] \cite{yu2025multi}
 
-- ``IJCTA`` Hongnan Cheng, **Chaozhi Yu**, Chenguang Zhang. Segmentation of IC Images in Integrated Circuit Reverse Engineering Using EfficientNet Encoder Based on U-Net++ Architecture. ***International Journal of Circuit Theory and Applications***. 2025. [https://doi.org/10.1002/cta.4485](https://doi.org/10.1002/cta.4485) [SCI Q3, 中科院三区] \cite{cheng2025segmentation}
+- ``IJCTA`` Hongnan Cheng, **Chaozhi Yu**, Chenguang Zhang. Segmentation of IC Images in Integrated Circuit Reverse Engineering Using EfficientNet Encoder Based on U-Net++ Architecture. ***International Journal of Circuit Theory and Applications***. 2025. [https://doi.org/10.1002/cta.4485](https://doi.org/10.1002/cta.4485) [SCI Q3, 中科院三区, IF 1.6] \cite{cheng2025segmentation}
 
 - ``ACM EITCE 2025`` Yudi Xu*, **Chaozhi Yu\*<sup>†</sup>**, Hongnan Cheng, Yulai Wu. Enhancing Stock Price Prediction with GLTCN: A Hybrid Model for Complex Market Dynamics. 2025, In Production.
 
