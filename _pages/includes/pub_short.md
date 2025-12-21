@@ -10,7 +10,7 @@
 
 - ``IJCTA`` Hongnan Cheng, **Chaozhi Yu**, Chenguang Zhang. Segmentation of IC Images in Integrated Circuit Reverse Engineering Using EfficientNet Encoder Based on U-Net++ Architecture. ***International Journal of Circuit Theory and Applications***. 2025. [https://doi.org/10.1002/cta.4485](https://doi.org/10.1002/cta.4485). [SCI Q3, 中科院三区, IF 1.6] \cite{cheng2025segmentation}
 
-- ``ACM EITCE 2025`` Yudi Xu<sup>†</sup>, **Chaozhi Yu<sup>†</sup>,\***, Hongnan Cheng, Yulai Wu. Enhancing Stock Price Prediction with GLTCN: A Hybrid Model for Complex Market Dynamics. ***Proceedings of the 9th International Conference on Electronic Information Technology and Computer Engineering***. 2025. [https://doi.org/10.1145/3766671.3766792](https://doi.org/10.1145/3766671.3766792).
+- ``ACM EITCE 2025`` Yudi Xu<sup>†</sup>, **Chaozhi Yu<sup>†,</sup>\***, Hongnan Cheng, Yulai Wu. Enhancing Stock Price Prediction with GLTCN: A Hybrid Model for Complex Market Dynamics. ***Proceedings of the 9th International Conference on Electronic Information Technology and Computer Engineering***. 2025. [https://doi.org/10.1145/3766671.3766792](https://doi.org/10.1145/3766671.3766792).
 
 - ``IEEE CAIBDA 2025`` Hongnan Cheng, **Chaozhi Yu**, Zhiyuan Yang, Chenguang Zhang. A Denoising and Structured Segmentation Method for IC Images via Integration of YOLOv5 and Lightweight Unet. ***2025 5th International Conference on Artificial Intelligence, Big Data and Algorithms (CAIBDA)***. 2025. [https://doi.org/10.1109/CAIBDA65784.2025.11183565](https://doi.org/10.1109/CAIBDA65784.2025.11183565). \cite{cheng2025denoising}
 
