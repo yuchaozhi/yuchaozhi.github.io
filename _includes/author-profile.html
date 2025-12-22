@@ -37,6 +37,9 @@
        {% if author.researchgate %}
         <li><a href="{{ author.researchgate }}"><i class="fab fa-fw fa-researchgate" aria-hidden="true"></i> ResearchGate</a></li>
       {% endif %}
+      {% if author.semanticscholar %}
+        <li><a href="{{ author.semanticscholar }}"><img src="/images/semantic-scholar-logo.png" alt="Semantic Scholar" style="width: 18px; height: 18px; margin-right: 8px; vertical-align: middle;"> Semantic Scholar</a></li>
+      {% endif %}
       {% if author.twitter %}
         <li><a href="https://twitter.com/{{ author.twitter }}"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
       {% endif %}
@@ -131,6 +134,9 @@
       {% endif %}
        {% if author.researchgate %}
         <a href="{{ author.researchgate }}"><i class="fab fa-fw fa-researchgate" aria-hidden="true"></i></a>
+      {% endif %}
+      {% if author.semanticscholar %}
+        <a href="{{ author.semanticscholar }}"><img src="/images/semantic-scholar-logo.png" alt="Semantic Scholar" style="width: 18px; height: 18px; vertical-align: middle;"></a>
       {% endif %}
       {% if author.twitter %}
         <a href="https://twitter.com/{{ author.twitter }}"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i></a>
