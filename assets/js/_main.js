@@ -109,6 +109,7 @@ $(document).ready(function(){
     var content = document.getElementById(id);
     var pre = content.querySelector('pre');
     var text = pre.textContent;
+    var copyBtn = content.querySelector('.copy-btn');
     
     // Create a temporary textarea element
     var textarea = document.createElement('textarea');
@@ -120,16 +121,14 @@ $(document).ready(function(){
       // Copy the text to clipboard
       document.execCommand('copy');
       
-      // Show feedback to user
-      var copyBtn = content.querySelector('.copy-btn');
-      var originalText = copyBtn.textContent;
-      copyBtn.textContent = '已复制!';
-      copyBtn.style.backgroundColor = '#6c757d';
+      // Change icon to checkmark
+      copyBtn.innerHTML = '<i class="fa-solid fa-check"></i>';
+      copyBtn.classList.add('copied');
       
       // Reset button after 2 seconds
       setTimeout(function() {
-        copyBtn.textContent = originalText;
-        copyBtn.style.backgroundColor = '#28a745';
+        copyBtn.innerHTML = '<i class="fa-regular fa-copy"></i>';
+        copyBtn.classList.remove('copied');
       }, 2000);
       
     } catch (err) {
