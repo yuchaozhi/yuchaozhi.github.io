@@ -167,6 +167,7 @@ h1:before, .anchor:before {
   white-space: pre-wrap;
   word-wrap: break-word;
   border: 1px solid #e9ecef;
+  position: relative;
 }
 
 /* BibTeX Syntax Highlighting */
@@ -193,27 +194,37 @@ h1:before, .anchor:before {
   color: #95a5a6;
 }
 
+/* Icon-based Copy Button */
 .copy-btn {
-  background-color: #28a745;
-  color: white;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: transparent;
   border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
-  font-size: 13px;
-  font-weight: 500;
   cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(40, 167, 69, 0.2);
+  color: #6c757d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .copy-btn:hover {
-  background-color: #218838;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+  background-color: #f8f9fa;
+  color: #3498db;
+  transform: scale(1.1);
 }
 
 .copy-btn:active {
-  background-color: #1e7e34;
-  transform: translateY(0);
-  box-shadow: 0 2px 4px rgba(40, 167, 69, 0.2);
+  transform: scale(0.95);
+}
+
+.copy-btn.copied {
+  color: #28a745;
+}
+
+.copy-btn i {
+  font-size: 16px;
 }

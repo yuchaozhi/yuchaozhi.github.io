@@ -64,6 +64,7 @@ function copyBibtex(id) {
   var content = document.getElementById(id);
   var pre = content.querySelector('pre');
   var text = pre.textContent;
+  var copyBtn = content.querySelector('.copy-btn');
   
   // Create a temporary textarea element
   var textarea = document.createElement('textarea');
@@ -75,16 +76,14 @@ function copyBibtex(id) {
     // Copy the text to clipboard
     document.execCommand('copy');
     
-    // Show feedback to user
-    var copyBtn = content.querySelector('.copy-btn');
-    var originalText = copyBtn.textContent;
-    copyBtn.textContent = '已复制!';
-    copyBtn.style.backgroundColor = '#6c757d';
+    // Change icon to checkmark
+    copyBtn.innerHTML = '<i class="fa-regular fa-check"></i>';
+    copyBtn.classList.add('copied');
     
     // Reset button after 2 seconds
     setTimeout(function() {
-      copyBtn.textContent = originalText;
-      copyBtn.style.backgroundColor = '#28a745';
+      copyBtn.innerHTML = '<i class="fa-regular fa-copy"></i>';
+      copyBtn.classList.remove('copied');
     }, 2000);
     
   } catch (err) {
@@ -211,7 +210,7 @@ function processCitations() {
         return '<button class="bibtex-btn" onclick="toggleBibtex(\'' + uniqueId + '\')">BibTeX</button>' +
                '<div id="' + uniqueId + '" class="bibtex-content" style="display: none;">' +
                '<pre>' + highlightedBibtex + '</pre>' +
-               '<button class="copy-btn" onclick="copyBibtex(\'' + uniqueId + '\')">复制</button>' +
+               '<button class="copy-btn" onclick="copyBibtex(\'' + uniqueId + '\')"><i class="fa-regular fa-copy"></i></button>' +
                '</div>';
       }
       return match; // Keep original if key not found
