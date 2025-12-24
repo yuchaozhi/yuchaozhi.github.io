@@ -19,6 +19,37 @@
 </head>
 
 <script>
+// BibTeX syntax highlighting function
+function highlightBibtex(bibtexStr) {
+  // Escape HTML special characters first
+  var escaped = bibtexStr
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+
+  // Highlight keywords (like @article, title, author, etc.)
+  var highlighted = escaped.replace(/(@\w+)|(\b(title|author|journal|year|volume|pages|doi|publisher|dimensions)\b)/g, function(match) {
+    return '<span class="bibtex-keyword">' + match + '</span>';
+  });
+
+  // Highlight identifiers (the citation key after @article{)
+  highlighted = highlighted.replace(/@(\w+)\{([^,]+),/g, function(match, type, key) {
+    return '<span class="bibtex-keyword">@' + type + '</span>{<span class="bibtex-identifier">' + key + '</span>,';
+  });
+
+  // Highlight strings (content inside braces)
+  highlighted = highlighted.replace(/=\{([^}]+)\}/g, function(match, content) {
+    return '={<span class="bibtex-string">' + content + '</span>}';
+  });
+
+  // Highlight braces
+  highlighted = highlighted.replace(/[{}]/g, function(match) {
+    return '<span class="bibtex-brace">' + match + '</span>';
+  });
+
+  return highlighted;
+}
+
 // BibTeX functionality
 function toggleBibtex(id) {
   var content = document.getElementById(id);
@@ -176,9 +207,10 @@ function processCitations() {
     var newHTML = text.replace(citeRegex, function(match, key) {
       if (bibtexDatabase[key]) {
         var uniqueId = 'bibtex-' + key + '-' + Math.random().toString(36).substr(2, 9);
+        var highlightedBibtex = highlightBibtex(bibtexDatabase[key]);
         return '<button class="bibtex-btn" onclick="toggleBibtex(\'' + uniqueId + '\')">BibTeX</button>' +
                '<div id="' + uniqueId + '" class="bibtex-content" style="display: none;">' +
-               '<pre>' + bibtexDatabase[key] + '</pre>' +
+               '<pre>' + highlightedBibtex + '</pre>' +
                '<button class="copy-btn" onclick="copyBibtex(\'' + uniqueId + '\')">复制</button>' +
                '</div>';
       }
