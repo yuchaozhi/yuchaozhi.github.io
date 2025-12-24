@@ -29,7 +29,7 @@ function highlightBibtex(bibtexStr) {
     .replace(/>/g, '&gt;');
 
   // Highlight keywords (like @article, title, author, etc.)
-  var highlighted = escaped.replace(/(@\w+)|(\b(title|author|journal|year|volume|pages|doi|publisher|dimensions)\b)/g, function(match) {
+  var highlighted = escaped.replace(/(@\w+)|(\b(title|author|journal|year|volume|pages|doi|publisher|dimensions|booktitle|organization)\b)/g, function(match) {
     return '<span class="bibtex-keyword">' + match + '</span>';
   });
 
