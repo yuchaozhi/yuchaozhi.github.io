@@ -4,7 +4,7 @@
 
 <!-- #### 🌍Spatiotemporal Data Mining -->
 
-- ``IEEE TCE`` **Chaozhi Yu**, Zhizhe Lin, Hongnan Cheng, Chunjie Cao, Teng Zhou, Man-Fai Leung. Quantum-Inspired Dynamic Spatiotemporal Matching Transformer for Traffic Flow Forecasting. ***IEEE Transactions on Consumer Electronics***. 2025. [https://doi.org/10.1109/TCE.2025.3642339](https://doi.org/10.1109/TCE.2025.3642339). [SCI Q1, 中科院二区, IF 10.9]
+- ``IEEE TCE`` **Chaozhi Yu**, Zhizhe Lin, Hongnan Cheng, Chunjie Cao, Teng Zhou, Man-Fai Leung. Quantum-Inspired Dynamic Spatiotemporal Matching Transformer for Traffic Flow Forecasting. ***IEEE Transactions on Consumer Electronics***. 2025. [https://doi.org/10.1109/TCE.2025.3642339](https://doi.org/10.1109/TCE.2025.3642339). [SCI Q1, 中科院二区, IF 10.9] \cite{yu2025quantum}
 
 - ``IEEE SPL`` **Chaozhi Yu**, Hongnan Cheng, Yufei Huang, Zhizhe Lin, Teng Zhou. Multi-Scale Cross-Dimensional Attention Network for Gland Segmentation. ***IEEE Signal Processing Letters***. 2025. [https://doi.org/10.1109/LSP.2025.3600374](https://doi.org/10.1109/LSP.2025.3600374). [SCI Q2, 中科院三区, IF 3.9] \cite{yu2025multi}
 
