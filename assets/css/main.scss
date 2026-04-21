@@ -121,53 +121,40 @@ h1:before, .anchor:before {
   margin-bottom: 1em;
 }
 
-/* BibTeX Button and Content Styles - Light Theme with Syntax Highlighting */
-.bibtex-btn {
-  background-color: #3498db;
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  margin-left: 8px;
-  border-radius: 4px;
-  font-size: 13px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(52, 152, 219, 0.2);
-}
-
-.bibtex-btn:hover {
-  background-color: #2980b9;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
-}
-
+/* BibTeX Content - Simplified Style */
 .bibtex-content {
-  margin-top: 12px;
-  margin-left: 20px;
-  padding: 20px;
-  background-color: #ffffff;
+  margin-top: 0.75em;
+  padding: 1em;
+  background-color: #f8f9fa;
   border: 1px solid #e9ecef;
-  border-radius: 8px;
+  border-radius: 6px;
   position: relative;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .bibtex-content pre {
-  background-color: #ffffff;
+  background-color: transparent;
   color: #2c3e50;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 0;
+  margin: 0;
   overflow-x: auto;
   font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
-  font-size: 14px;
-  line-height: 1.6;
-  margin: 0 0 12px 0;
+  font-size: 0.85em;
+  line-height: 1.5;
   white-space: pre-wrap;
   word-wrap: break-word;
-  border: 1px solid #e9ecef;
-  position: relative;
+  border: none;
 }
 
 /* BibTeX Syntax Highlighting */
@@ -194,27 +181,27 @@ h1:before, .anchor:before {
   color: #95a5a6;
 }
 
-/* Icon-based Copy Button */
+/* Icon-based Copy Button - Compact */
 .copy-btn {
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 0.5em;
+  right: 0.5em;
   background-color: transparent;
   border: none;
   cursor: pointer;
-  padding: 4px;
+  padding: 0.25em;
   border-radius: 4px;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   color: #6c757d;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 0.9em;
 }
 
 .copy-btn:hover {
-  background-color: #f8f9fa;
+  background-color: #e9ecef;
   color: #3498db;
-  transform: scale(1.1);
 }
 
 .copy-btn:active {
@@ -227,4 +214,460 @@ h1:before, .anchor:before {
 
 .copy-btn i {
   font-size: 16px;
+}
+
+/* ==========================================================================
+   Publication List Styles - Clean & Organized
+   ========================================================================== */
+
+/* Publication Entry Container */
+.publication-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.publication-list li {
+  margin-bottom: 1.5em;
+  padding: 1em 0;
+  border-bottom: 1px solid #e9ecef;
+  position: relative;
+}
+
+.publication-list li:last-child {
+  border-bottom: none;
+}
+
+/* Publication Filter Section */
+.pub-filter-section {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5em;
+  margin-bottom: 1.5em;
+  border: 1px solid #e9ecef;
+}
+
+.pub-filter-title {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.5em;
+}
+
+.pub-filter-description {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 1em;
+  line-height: 1.4;
+}
+
+.pub-filter-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6em;
+  margin-bottom: 1em;
+}
+
+.pub-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.4em 0.9em;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 20px;
+  font-size: 0.85em;
+  font-weight: 500;
+  color: #495057;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pub-filter-btn:hover {
+  background-color: #e9ecef;
+  border-color: #adb5bd;
+}
+
+.pub-filter-btn.active {
+  background-color: #2c5aa0;
+  color: #fff;
+  border-color: #2c5aa0;
+}
+
+.pub-filter-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.5em;
+  height: 1.5em;
+  padding: 0 0.4em;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-size: 0.8em;
+  font-weight: 600;
+}
+
+.pub-filter-btn.active .pub-filter-count {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.pub-filter-status {
+  font-size: 0.9em;
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Publication Entry Layout - Compact Card Style */
+.publication-entry {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  padding: 1em 1.3em;
+  margin-bottom: 1em;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.publication-entry:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.publication-entry.hidden {
+  display: none;
+}
+
+/* Publication Header - Venue Badge & Year */
+.publication-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  flex-wrap: wrap;
+}
+
+/* Type Badge - Journal/Conference */
+.type-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2em 0.6em;
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  font-size: 0.7em;
+  font-weight: 600;
+  border-radius: 3px;
+  text-transform: capitalize;
+}
+
+.type-badge.conference {
+  background-color: #fff3e0;
+  color: #ef6c00;
+}
+
+/* Venue Badge - Short Name */
+.venue-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2em 0.6em;
+  background-color: #ffebee;
+  color: #c62828;
+  font-size: 0.7em;
+  font-weight: 600;
+  border-radius: 3px;
+}
+
+/* Publication Year */
+.pub-year {
+  color: #6c757d;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+/* Publication Title */
+.publication-title {
+  font-size: 1.1em;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.35;
+  margin: 0.2em 0;
+}
+
+/* Authors */
+.publication-authors {
+  color: #666666;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+.publication-authors strong {
+  color: #000;
+  font-weight: 600;
+}
+
+/* Publication Venue Line */
+.publication-venue-line {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  margin-top: 0.15em;
+}
+
+.publication-venue {
+  color: #1565c0;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.pub-year-inline {
+  color: #ed6c02;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.publication-venue em {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+/* Publication Links & Meta */
+.publication-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  flex-wrap: wrap;
+  margin-top: 0.5em;
+}
+
+/* DOI Link */
+.doi-link {
+  color: #3498db;
+  text-decoration: none;
+  font-size: 0.9em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25em;
+}
+
+.doi-link:hover {
+  text-decoration: underline;
+}
+
+/* Impact Factor / Ranking Badge */
+.impact-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2em 0.6em;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  font-size: 0.8em;
+  color: #495057;
+  font-weight: 500;
+}
+
+.impact-badge .q1 {
+  color: #e74c3c;
+  font-weight: 700;
+}
+
+.impact-badge .q2 {
+  color: #f39c12;
+  font-weight: 700;
+}
+
+.impact-badge .q3 {
+  color: #3498db;
+  font-weight: 700;
+}
+
+/* Publication Meta - Align all items */
+.publication-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  flex-wrap: wrap;
+  margin-top: 0.75em;
+  padding-top: 0.5em;
+}
+
+/* Publication Actions - Button Row */
+.publication-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-left: auto;
+  flex-direction: row-reverse; /* 从右往左: DOI → BibTeX → PDF → Code */
+}
+
+/* Action Buttons - DOI, BibTeX, PDF, Code - Minimal Style */
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3em;
+  padding: 0.25em 0.6em;
+  font-size: 0.75em;
+  font-weight: 500;
+  border-radius: 3px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  border: 1px solid transparent;
+  background-color: transparent;
+  box-sizing: border-box;
+  min-width: 4em;
+  line-height: 1;
+  vertical-align: middle;
+  transform: none;
+}
+
+/* DOI Button - Outline Style */
+.action-btn.doi-btn {
+  color: #17a2b8;
+  border: 1px solid #17a2b8;
+  text-decoration: none;
+}
+
+.action-btn.doi-btn:hover {
+  background-color: #17a2b8;
+  color: white;
+  text-decoration: none;
+}
+
+.action-btn.doi-btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* BibTeX Button - Outline Style */
+.action-btn.bibtex-btn {
+  color: #3498db;
+  border: 1px solid #3498db;
+}
+
+.action-btn.bibtex-btn:hover {
+  background-color: #3498db;
+  color: white;
+}
+
+.action-btn.bibtex-btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.action-btn.bibtex-btn:active {
+  transform: none;
+  box-shadow: none;
+}
+
+/* PDF Button - Outline Style */
+.action-btn.pdf-btn {
+  color: #e74c3c;
+  border-color: #e74c3c;
+}
+
+.action-btn.pdf-btn:hover {
+  background-color: #e74c3c;
+  color: white;
+}
+
+/* Code Button - Outline Style */
+.action-btn.code-btn {
+  color: #6c757d;
+  border-color: #6c757d;
+  text-decoration: none;
+}
+
+.action-btn.code-btn:hover {
+  background-color: #6c757d;
+  color: white;
+  text-decoration: none;
+}
+
+.action-btn i {
+  font-size: 0.8em;
+}
+
+/* BibTeX Container - Code Block Style */
+.bibtex-container {
+  margin-top: 0.75em;
+  padding: 1em;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  position: relative;
+}
+
+.bibtex-container pre {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  color: #2c3e50;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 0.85em;
+  line-height: 1.5;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.bibtex-container code {
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+}
+
+/* Publication Links Row */
+.publication-links {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-top: 0.5em;
+}
+
+.pub-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  color: #6c757d;
+  text-decoration: none;
+  font-size: 0.85em;
+  transition: color 0.3s ease;
+}
+
+.pub-link:hover {
+  color: #00369f;
+}
+
+.pub-link i {
+  font-size: 0.9em;
+}
+
+/* Equal Contribution Marker */
+.equal-contrib {
+  color: #e74c3c;
+  font-weight: 600;
+  font-size: 0.85em;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .publication-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5em;
+  }
+  
+  .publication-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5em;
+  }
+  
+  .venue-badge {
+    font-size: 0.7em;
+  }
+  
+  .publication-title {
+    font-size: 1em;
+  }
 }

@@ -59,6 +59,7 @@ function toggleBibtex(id) {
   } else {
     content.style.display = 'none';
   }
+  return false; // Prevent default behavior
 }
 
 function copyBibtex(id) {
@@ -154,8 +155,11 @@ function loadBibtexFromFile() {
           var entryTypeMatch = entries[i-1].match(/@(\w+)\{/);
           var entryType = entryTypeMatch ? entryTypeMatch[1] : 'article';
           var bibtexStr = '@' + entryType + '{' + key + ',\n';
-          for (var fieldName in fields) {
-            bibtexStr += '  ' + fieldName + '={' + fields[fieldName] + '},\n';
+          var fieldNames = Object.keys(fields);
+          for (var j = 0; j < fieldNames.length; j++) {
+            var fieldName = fieldNames[j];
+            var comma = (j < fieldNames.length - 1) ? ',' : '';
+            bibtexStr += '  ' + fieldName + '={' + fields[fieldName] + '}' + comma + '\n';
           }
           bibtexStr += '}';
           
@@ -202,17 +206,22 @@ function processCitations() {
     var text = textNode.textContent;
     var parent = textNode.parentNode;
     
+    // Find the publication entry container
+    var publicationEntry = parent.closest('.publication-entry');
+    
     // Replace \cite{key} with BibTeX button
     var citeRegex = /\\cite\{([^}]+)\}/g;
+    var bibtexContents = [];
     var newHTML = text.replace(citeRegex, function(match, key) {
       if (bibtexDatabase[key]) {
         var uniqueId = 'bibtex-' + key + '-' + Math.random().toString(36).substr(2, 9);
         var highlightedBibtex = highlightBibtex(bibtexDatabase[key]);
-        return '<button class="bibtex-btn" onclick="toggleBibtex(\'' + uniqueId + '\')">BibTeX</button>' +
-               '<div id="' + uniqueId + '" class="bibtex-content" style="display: none;">' +
+        // Store BibTeX content to append later
+        bibtexContents.push('<div id="' + uniqueId + '" class="bibtex-content" style="display: none;">' +
                '<pre>' + highlightedBibtex + '</pre>' +
                '<button class="copy-btn" onclick="copyBibtex(\'' + uniqueId + '\')"><i class="fa-regular fa-copy"></i></button>' +
-               '</div>';
+               '</div>');
+        return '<button class="action-btn bibtex-btn" onclick="toggleBibtex(\'' + uniqueId + '\')"><i class="fa-solid fa-quote-right"></i> BibTeX</button>';
       }
       return match; // Keep original if key not found
     });
@@ -224,7 +233,64 @@ function processCitations() {
         parent.insertBefore(tempDiv.firstChild, textNode);
       }
       parent.removeChild(textNode);
+      
+      // Append BibTeX contents to the publication entry
+      if (publicationEntry && bibtexContents.length > 0) {
+        bibtexContents.forEach(function(content) {
+          var contentDiv = document.createElement('div');
+          contentDiv.innerHTML = content;
+          publicationEntry.appendChild(contentDiv.firstChild);
+        });
+      }
     }
+  });
+}
+
+// Publication Filter Functionality
+document.addEventListener('DOMContentLoaded', function() {
+  initPublicationFilter();
+});
+
+function initPublicationFilter() {
+  var filterButtons = document.querySelectorAll('.pub-filter-btn');
+  var publicationEntries = document.querySelectorAll('.publication-entry');
+  var filterStatus = document.querySelector('.pub-filter-status');
+  
+  if (filterButtons.length === 0) return;
+  
+  filterButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+      var filter = this.getAttribute('data-filter');
+      
+      // Update active button
+      filterButtons.forEach(function(btn) {
+        btn.classList.remove('active');
+      });
+      this.classList.add('active');
+      
+      // Filter publications
+      var visibleCount = 0;
+      publicationEntries.forEach(function(entry) {
+        var tags = entry.getAttribute('data-tags');
+        
+        if (filter === 'all' || (tags && tags.includes(filter))) {
+          entry.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          entry.classList.add('hidden');
+        }
+      });
+      
+      // Update status text
+      if (filterStatus) {
+        if (filter === 'all') {
+          filterStatus.textContent = 'Showing all papers.';
+        } else {
+          var filterName = this.textContent.replace(/\s*\d+\s*$/, '').trim();
+          filterStatus.textContent = 'Showing ' + visibleCount + ' paper' + (visibleCount !== 1 ? 's' : '') + ' tagged with "' + filterName + '".';
+        }
+      }
+    });
   });
 }
 </script>
