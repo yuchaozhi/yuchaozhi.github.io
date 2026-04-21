@@ -8,7 +8,7 @@
   <div class="pub-filter-description">Default view shows all papers. Click a topic tag to filter papers by category.</div>
   <div class="pub-filter-tags">
     <button class="pub-filter-btn active" data-filter="all">All Papers <span class="pub-filter-count">7</span></button>
-    <button class="pub-filter-btn" data-filter="first-author">First/Corresponding Author <span class="pub-filter-count">4</span></button>
+    <button class="pub-filter-btn" data-filter="first-author">First/Corresponding Author <span class="pub-filter-count">3</span></button>
     <button class="pub-filter-btn" data-filter="sci-q1">SCI Q1 <span class="pub-filter-count">2</span></button>
     <button class="pub-filter-btn" data-filter="sci-q2">SCI Q2 <span class="pub-filter-count">2</span></button>
     <button class="pub-filter-btn" data-filter="spatiotemporal">Spatiotemporal Data Mining <span class="pub-filter-count">3</span></button>
