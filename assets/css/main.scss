@@ -565,11 +565,13 @@ h1:before, .anchor:before {
 .action-btn.pdf-btn {
   color: #e74c3c;
   border-color: #e74c3c;
+  text-decoration: none;
 }
 
 .action-btn.pdf-btn:hover {
   background-color: #e74c3c;
   color: white;
+  text-decoration: none;
 }
 
 /* Code Button - Outline Style */

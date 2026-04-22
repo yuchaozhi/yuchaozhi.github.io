@@ -12,6 +12,7 @@
     <button class="pub-filter-btn" data-filter="sci-q1">SCI Q1 <span class="pub-filter-count">2</span></button>
     <button class="pub-filter-btn" data-filter="sci-q2">SCI Q2 <span class="pub-filter-count">2</span></button>
     <button class="pub-filter-btn" data-filter="spatiotemporal">Spatiotemporal Data Mining <span class="pub-filter-count">3</span></button>
+    <button class="pub-filter-btn" data-filter="traffic-flow">Traffic Flow <span class="pub-filter-count">2</span></button>
     <button class="pub-filter-btn" data-filter="image-processing">Image Processing <span class="pub-filter-count">4</span></button>
     <button class="pub-filter-btn" data-filter="forecasting">Forecasting <span class="pub-filter-count">3</span></button>
     <button class="pub-filter-btn" data-filter="segmentation">Segmentation <span class="pub-filter-count">4</span></button>
@@ -24,7 +25,7 @@
 <div class="publication-list">
 
 <!-- IEEE TCE -->
-<div class="publication-entry" data-tags="first-author sci-q1 spatiotemporal forecasting">
+<div class="publication-entry" data-tags="first-author sci-q1 spatiotemporal forecasting traffic-flow">
   <div class="publication-header">
     <span class="type-badge">Journal</span>
     <span class="venue-badge">SCI Q1 · 中科院一区Top · IF 10.9</span>
@@ -43,11 +44,14 @@
         <i class="fa-solid fa-link"></i> DOI
       </a>
       \cite{yu2025quantum}
+      <a href="https://www.researchgate.net/publication/398571018_Quantum-Inspired_Dynamic_Spatiotemporal_Matching_Transformer_for_Traffic_Flow_Forecasting" class="action-btn pdf-btn" target="_blank">
+        <i class="fa-solid fa-file-pdf"></i> PDF
+      </a>
     </div>
   </div>
 </div>
 
-<!-- IEEE SPL -->
+<!-- IEEE SPL MCANet -->
 <div class="publication-entry" data-tags="first-author sci-q2 image-processing segmentation with-code">
   <div class="publication-header">
     <span class="type-badge">Journal</span>
@@ -67,6 +71,9 @@
         <i class="fa-solid fa-link"></i> DOI
       </a>
       \cite{yu2025multi}
+      <a href="https://www.researchgate.net/publication/394740235_Multi-Scale_Cross-Dimensional_Attention_Network_for_Gland_Segmentation" class="action-btn pdf-btn" target="_blank">
+        <i class="fa-solid fa-file-pdf"></i> PDF
+      </a>
       <a href="https://github.com/yuchaozhi/MCANet" class="action-btn code-btn" target="_blank">
         <i class="fa-brands fa-github"></i> Code
       </a>
@@ -75,7 +82,7 @@
 </div>
 
 <!-- IEEE IoT-J -->
-<div class="publication-entry" data-tags="sci-q1 spatiotemporal forecasting">
+<div class="publication-entry" data-tags="sci-q1 spatiotemporal forecasting traffic-flow">
   <div class="publication-header">
     <span class="type-badge">Journal</span>
     <span class="venue-badge">SCI Q1 · 中科院一区Top · IF 8.9</span>
@@ -94,11 +101,14 @@
         <i class="fa-solid fa-link"></i> DOI
       </a>
       \cite{lin2026cross}
+      <a href="https://www.researchgate.net/publication/404017999_Cross_City_Pre-Training_Transfer_Learning_Model_for_Traffic_Flow_Prediction" class="action-btn pdf-btn" target="_blank">
+        <i class="fa-solid fa-file-pdf"></i> PDF
+      </a>
     </div>
   </div>
 </div>
 
-<!-- IEEE SPL -->
+<!-- IEEE SPL EAL-ICNet -->
 <div class="publication-entry" data-tags="sci-q2 image-processing segmentation with-code">
   <div class="publication-header">
     <span class="type-badge">Journal</span>
@@ -118,6 +128,9 @@
         <i class="fa-solid fa-link"></i> DOI
       </a>
       \cite{cheng2026eal}
+      <a href="https://www.researchgate.net/publication/404014677_EAL-ICNet_Enhanced_Attention_Lightweight_Network_With_Multi-Scale_Transformer_Modules_for_IC_Image_Segmentation" class="action-btn pdf-btn" target="_blank">
+        <i class="fa-solid fa-file-pdf"></i> PDF
+      </a>
       <a href="https://github.com/chndaz/EAL-ICNet" class="action-btn code-btn" target="_blank">
         <i class="fa-brands fa-github"></i> Code
       </a>
@@ -145,6 +158,9 @@
         <i class="fa-solid fa-link"></i> DOI
       </a>
       \cite{cheng2025segmentation}
+      <a href="https://www.researchgate.net/publication/396224229_Segmentation_of_IC_Images_in_Integrated_Circuit_Reverse_Engineering_Using_EfficientNet_Encoder_Based_on_U-Net_Architecture" class="action-btn pdf-btn" target="_blank">
+        <i class="fa-solid fa-file-pdf"></i> PDF
+      </a>
       <a href="https://github.com/chndaz/UNetplusplus-integrated-with-multiple-denoising-models" class="action-btn code-btn" target="_blank">
         <i class="fa-brands fa-github"></i> Code
       </a>
@@ -161,7 +177,7 @@
     Enhancing Stock Price Prediction with GLTCN: A Hybrid Model for Complex Market Dynamics
   </div>
   <div class="publication-authors">
-    Yudi Xu<sup>†</sup>, <strong>Chaozhi Yu<sup>†</sup>*</strong>, Hongnan Cheng, Yulai Wu
+    Yudi Xu<sup>†</sup>, <strong>Chaozhi Yu<sup>†,</sup>*</strong> Hongnan Cheng, Yulai Wu
   </div>
   <div class="publication-venue-line">
     <span class="publication-venue">Proceedings of the 9th International Conference on Electronic Information Technology and Computer Engineering</span>
@@ -171,6 +187,9 @@
         <i class="fa-solid fa-link"></i> DOI
       </a>
       \cite{xu2025enhancing}
+      <a href="https://www.researchgate.net/publication/398911853_Enhancing_Stock_Price_Prediction_with_GLTCN_A_Hybrid_Model_for_Complex_Market_Dynamics" class="action-btn pdf-btn" target="_blank">
+        <i class="fa-solid fa-file-pdf"></i> PDF
+      </a>
     </div>
   </div>
 </div>
@@ -194,6 +213,9 @@
         <i class="fa-solid fa-link"></i> DOI
       </a>
       \cite{cheng2025denoising}
+      <a href="https://www.researchgate.net/publication/396393113_A_Denoising_and_Structured_Segmentation_Method_for_IC_Images_via_Integration_of_YOLOv5_and_Lightweight_UNet" class="action-btn pdf-btn" target="_blank">
+        <i class="fa-solid fa-file-pdf"></i> PDF
+      </a>
     </div>
   </div>
 </div>
