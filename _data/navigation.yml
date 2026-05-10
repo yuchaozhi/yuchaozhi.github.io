@@ -21,8 +21,8 @@ main:
   # - title: "Internships"
   #   url: "/#-internships"
 
-  - title: "Skills"
-    url: "/#-skills"
+  # - title: "Skills"
+  #   url: "/#-skills"
 
   - title: "Links"
     url: "/links/"

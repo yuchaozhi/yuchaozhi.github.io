@@ -1,6 +1,7 @@
 # 🔥 News
 
-<div class="news-scroll-container" markdown="1">
+{::options parse_block_html="true" /}
+<div class="news-scroll-container" style="text-align: justify;" markdown="1">
 
 - *2026.04*: 🎉Our paper "[Cross City Pre-Training Transfer Learning Model for Traffic Flow Prediction](https://doi.org/10.1109/JIOT.2026.3685259)" has been accepted by **IEEE Internet of Things Journal**.
 - *2025.12*: 🎉Our paper "[Quantum-Inspired Dynamic Spatiotemporal Matching Transformer for Traffic Flow Forecasting](https://doi.org/10.1109/TCE.2025.3642339)" has been accepted by **IEEE Transactions on Consumer Electronics**.
@@ -11,3 +12,4 @@
 
 
 </div>
+{::options parse_block_html="false" /}

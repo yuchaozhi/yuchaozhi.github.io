@@ -7,17 +7,16 @@
   <div class="pub-filter-title">Filter by topic</div>
   <div class="pub-filter-description">Default view shows all papers. Click a topic tag to filter papers by category.</div>
   <div class="pub-filter-tags">
-    <button class="pub-filter-btn active" data-filter="all">All Papers <span class="pub-filter-count">7</span></button>
-    <button class="pub-filter-btn" data-filter="first-author">First/Corresponding Author <span class="pub-filter-count">3</span></button>
-    <button class="pub-filter-btn" data-filter="sci-q1">SCI Q1 <span class="pub-filter-count">2</span></button>
-    <button class="pub-filter-btn" data-filter="sci-q2">SCI Q2 <span class="pub-filter-count">2</span></button>
-    <button class="pub-filter-btn" data-filter="spatiotemporal">Spatiotemporal Data Mining <span class="pub-filter-count">3</span></button>
-    <button class="pub-filter-btn" data-filter="traffic-flow">Traffic Flow <span class="pub-filter-count">2</span></button>
-    <button class="pub-filter-btn" data-filter="image-processing">Image Processing <span class="pub-filter-count">4</span></button>
-    <button class="pub-filter-btn" data-filter="forecasting">Forecasting <span class="pub-filter-count">3</span></button>
-    <button class="pub-filter-btn" data-filter="segmentation">Segmentation <span class="pub-filter-count">4</span></button>
-    <button class="pub-filter-btn" data-filter="conference">Conference <span class="pub-filter-count">2</span></button>
-    <button class="pub-filter-btn" data-filter="with-code">With Code <span class="pub-filter-count">3</span></button>
+    <button class="pub-filter-btn active" data-filter="all">All Papers <span class="pub-filter-count" data-count="all">0</span></button>
+    <button class="pub-filter-btn" data-filter="first-author">First/Corresponding Author <span class="pub-filter-count" data-count="first-author">0</span></button>
+    <button class="pub-filter-btn" data-filter="sci-q1">SCI Q1 <span class="pub-filter-count" data-count="sci-q1">0</span></button>
+    <button class="pub-filter-btn" data-filter="sci-q2">SCI Q2 <span class="pub-filter-count" data-count="sci-q2">0</span></button>
+    <button class="pub-filter-btn" data-filter="spatiotemporal">Spatiotemporal Data Mining <span class="pub-filter-count" data-count="spatiotemporal">0</span></button>
+    <button class="pub-filter-btn" data-filter="traffic-flow">Traffic Flow <span class="pub-filter-count" data-count="traffic-flow">0</span></button>
+    <button class="pub-filter-btn" data-filter="spatiotemporal-forecasting">Spatiotemporal Forecasting <span class="pub-filter-count" data-count="spatiotemporal-forecasting">0</span></button>
+    <button class="pub-filter-btn" data-filter="image-processing">Image Processing <span class="pub-filter-count" data-count="image-processing">0</span></button>
+    <button class="pub-filter-btn" data-filter="conference">Conference <span class="pub-filter-count" data-count="conference">0</span></button>
+    <button class="pub-filter-btn" data-filter="with-code">With Code <span class="pub-filter-count" data-count="with-code">0</span></button>
   </div>
   <div class="pub-filter-status">Showing all papers.</div>
 </div>
@@ -25,7 +24,7 @@
 <div class="publication-list">
 
 <!-- IEEE TCE -->
-<div class="publication-entry" data-tags="first-author sci-q1 spatiotemporal forecasting traffic-flow">
+<div class="publication-entry" data-tags="first-author sci-q1 spatiotemporal spatiotemporal-forecasting traffic-flow">
   <div class="publication-header">
     <span class="type-badge">Journal</span>
     <span class="venue-badge">SCI Q1 · 中科院一区Top · IF 10.9</span>
@@ -52,10 +51,10 @@
 </div>
 
 <!-- IEEE SPL MCANet -->
-<div class="publication-entry" data-tags="first-author sci-q2 image-processing segmentation with-code">
+<div class="publication-entry" data-tags="first-author sci-q2 image-processing with-code">
   <div class="publication-header">
     <span class="type-badge">Journal</span>
-    <span class="venue-badge">SCI Q2</span>
+    <span class="venue-badge">SCI Q2 · IF 3.9</span>
   </div>
   <div class="publication-title">
     Multi-Scale Cross-Dimensional Attention Network for Gland Segmentation
@@ -82,7 +81,7 @@
 </div>
 
 <!-- IEEE IoT-J -->
-<div class="publication-entry" data-tags="sci-q1 spatiotemporal forecasting traffic-flow">
+<div class="publication-entry" data-tags="sci-q1 spatiotemporal spatiotemporal-forecasting traffic-flow">
   <div class="publication-header">
     <span class="type-badge">Journal</span>
     <span class="venue-badge">SCI Q1 · 中科院一区Top · IF 8.9</span>
@@ -109,10 +108,10 @@
 </div>
 
 <!-- IEEE SPL EAL-ICNet -->
-<div class="publication-entry" data-tags="sci-q2 image-processing segmentation with-code">
+<div class="publication-entry" data-tags="sci-q2 image-processing with-code">
   <div class="publication-header">
     <span class="type-badge">Journal</span>
-    <span class="venue-badge">SCI Q2</span>
+    <span class="venue-badge">SCI Q2 · IF 3.9</span>
   </div>
   <div class="publication-title">
     EAL-ICNet: Enhanced Attention Lightweight Network With Multi-Scale Transformer Modules for IC Image Segmentation
@@ -139,10 +138,10 @@
 </div>
 
 <!-- IJCTA -->
-<div class="publication-entry" data-tags="image-processing segmentation with-code">
+<div class="publication-entry" data-tags="image-processing with-code">
   <div class="publication-header">
     <span class="type-badge">Journal</span>
-    <span class="venue-badge">SCI Q3</span>
+    <span class="venue-badge">SCI Q3 · IF 1.6</span>
   </div>
   <div class="publication-title">
     Segmentation of IC Images in Integrated Circuit Reverse Engineering Using EfficientNet Encoder Based on U-Net++ Architecture
@@ -168,8 +167,35 @@
   </div>
 </div>
 
+<!-- Neural Computing and Applications 2026 -->
+<div class="publication-entry" data-tags="image-processing machine learning">
+  <div class="publication-header">
+    <span class="type-badge">Journal</span>
+    <span class="venue-badge">CCF C · IF 4.9</span>
+  </div>
+  <div class="publication-title">
+    Iterative Deep PU Learning Combined with Data Features
+  </div>
+  <div class="publication-authors">
+    Hongnan Cheng, Yan Zhang, <strong>Chaozhi Yu</strong>, Boyu Li, Chenguang Zhang
+  </div>
+  <div class="publication-venue-line">
+    <span class="publication-venue">Neural Computing and Applications</span>
+    <span class="pub-year-inline">2026</span>
+    <div class="publication-actions">
+      <a href="https://doi.org/10.1007/s00521-026-12085-0" class="action-btn doi-btn" target="_blank">
+        <i class="fa-solid fa-link"></i> DOI
+      </a>
+      \cite{cheng2026iterative}
+      <a href="https://www.researchgate.net/publication/404492674_Iterative_deep_PU_learning_combined_with_data_features" class="action-btn pdf-btn" target="_blank">
+        <i class="fa-solid fa-file-pdf"></i> PDF
+      </a>
+    </div>
+  </div>
+</div>
+
 <!-- ACM EITCE 2025 -->
-<div class="publication-entry" data-tags="first-author conference spatiotemporal forecasting">
+<div class="publication-entry" data-tags="first-author conference spatiotemporal spatiotemporal-forecasting">
   <div class="publication-header">
     <span class="type-badge conference">Conference</span>
   </div>
@@ -195,7 +221,7 @@
 </div>
 
 <!-- IEEE CAIBDA 2025 -->
-<div class="publication-entry" data-tags="image-processing segmentation conference">
+<div class="publication-entry" data-tags="image-processing conference">
   <div class="publication-header">
     <span class="type-badge conference">Conference</span>
   </div>

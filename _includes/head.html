@@ -258,6 +258,32 @@ function initPublicationFilter() {
   
   if (filterButtons.length === 0) return;
   
+  // Auto-calculate and update filter counts
+  function updateFilterCounts() {
+    filterButtons.forEach(function(button) {
+      var filter = button.getAttribute('data-filter');
+      var countSpan = button.querySelector('.pub-filter-count');
+      
+      if (filter === 'all') {
+        // Count all publications
+        if (countSpan) countSpan.textContent = publicationEntries.length;
+      } else {
+        // Count publications with specific tag
+        var count = 0;
+        publicationEntries.forEach(function(entry) {
+          var tags = entry.getAttribute('data-tags');
+          if (tags && tags.includes(filter)) {
+            count++;
+          }
+        });
+        if (countSpan) countSpan.textContent = count;
+      }
+    });
+  }
+  
+  // Update counts on initialization
+  updateFilterCounts();
+  
   filterButtons.forEach(function(button) {
     button.addEventListener('click', function() {
       var filter = this.getAttribute('data-filter');
