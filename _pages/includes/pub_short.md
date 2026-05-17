@@ -203,7 +203,7 @@
     Enhancing Stock Price Prediction with GLTCN: A Hybrid Model for Complex Market Dynamics
   </div>
   <div class="publication-authors">
-    Yudi Xu<sup>†</sup>, <strong>Chaozhi Yu<sup>†,</sup>*</strong> Hongnan Cheng, Yulai Wu
+    Yudi Xu<sup>†</sup>, <strong>Chaozhi Yu<sup>†,</sup>*</strong>, Hongnan Cheng, Yulai Wu
   </div>
   <div class="publication-venue-line">
     <span class="publication-venue">Proceedings of the 9th International Conference on Electronic Information Technology and Computer Engineering</span>
