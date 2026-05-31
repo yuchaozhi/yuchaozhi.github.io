@@ -1,8 +1,8 @@
-# 📝 Publications
+# <i class="fas fa-newspaper" style="color: #333333; margin-right: 0.75em;"></i>Publications
 
 <!-- My full paper list is shown at [my personal homepage](https://yuchaozhi.github.io). -->
 
-<!-- Filter Section -->
+<!-- Filter Section
 <div class="pub-filter-section">
   <div class="pub-filter-title">Filter by topic</div>
   <div class="pub-filter-description">Default view shows all papers. Click a topic tag to filter papers by category.</div>
@@ -20,6 +20,7 @@
   </div>
   <div class="pub-filter-status">Showing all papers.</div>
 </div>
+-->
 
 <div class="publication-list">
 

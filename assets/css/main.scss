@@ -40,6 +40,36 @@
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
 
+/* About Me Text - Justify on both desktop and mobile */
+.about-text,
+.about-text p {
+  text-align: justify;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+
+  @media (max-width: 768px) {
+    word-spacing: -0.015em;
+    letter-spacing: -0.02em;
+  }
+}
+
+.about-text h1 {
+  @media (max-width: 768px) {
+    white-space: nowrap;
+    font-size: 1.3em;
+  }
+}
+
+/* Funding section - custom word spacing */
+.funding-text,
+.funding-text p,
+.funding-text li {
+  @media (max-width: 768px) {
+    word-spacing: -0.02em;
+  }
+}
+
 .paper-box {
     display: flex;
     justify-content: left;
@@ -653,24 +683,47 @@ h1:before, .anchor:before {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-  .publication-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5em;
+  .publication-entry {
+    position: relative;
   }
-  
+
+  .publication-header {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.4em;
+  }
+
   .publication-meta {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5em;
   }
-  
+
   .venue-badge {
     font-size: 0.7em;
   }
-  
+
   .publication-title {
     font-size: 1em;
+  }
+
+  .pub-year-inline {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 0.8em;
+  }
+
+  .publication-venue-line {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5em;
+  }
+
+  .publication-actions {
+    margin-left: 0;
+    flex-wrap: wrap;
   }
 }
 

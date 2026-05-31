@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>响应式预览 - 桌面端 & 手机端</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1e1e1e;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            background: #2d2d2d;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-bottom: 1px solid #3e3e3e;
+        }
+        .header h1 {
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .device-tabs {
+            display: flex;
+            gap: 10px;
+        }
+        .device-tab {
+            padding: 6px 16px;
+            background: #3e3e3e;
+            border: none;
+            color: #ccc;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.2s;
+        }
+        .device-tab.active {
+            background: #0e639c;
+            color: #fff;
+        }
+        .device-tab:hover {
+            background: #4e4e4e;
+        }
+        .device-tab.active:hover {
+            background: #1177bb;
+        }
+        .preview-container {
+            flex: 1;
+            display: flex;
+            overflow: hidden;
+        }
+        .device-frame {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid #3e3e3e;
+        }
+        .device-frame:last-child {
+            border-right: none;
+        }
+        .device-label {
+            background: #2d2d2d;
+            padding: 10px 20px;
+            font-size: 13px;
+            color: #ccc;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 1px solid #3e3e3e;
+        }
+        .device-label .icon {
+            font-size: 16px;
+        }
+        .device-label .resolution {
+            margin-left: auto;
+            color: #888;
+            font-size: 12px;
+        }
+        .iframe-wrapper {
+            flex: 1;
+            overflow: auto;
+            background: #1e1e1e;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        iframe {
+            border: none;
+            background: #fff;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+            border-radius: 8px;
+        }
+        .desktop iframe {
+            width: 100%;
+            height: 100%;
+            min-width: 1024px;
+        }
+        .mobile iframe {
+            width: 375px;
+            height: 812px;
+            border-radius: 40px;
+            border: 12px solid #333;
+        }
+        .mobile-notched {
+            position: relative;
+        }
+        .mobile-notched::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 30px;
+            background: #333;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            z-index: 10;
+        }
+        .scale-controls {
+            display: flex;
+            gap: 5px;
+            margin-left: auto;
+        }
+        .scale-btn {
+            padding: 4px 10px;
+            background: #3e3e3e;
+            border: none;
+            color: #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .scale-btn:hover {
+            background: #4e4e4e;
+        }
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📱 响应式预览</h1>
+        <div class="device-tabs">
+            <button class="device-tab active" onclick="showMode('both')">并排显示</button>
+            <button class="device-tab" onclick="showMode('desktop')">仅桌面端</button>
+            <button class="device-tab" onclick="showMode('mobile')">仅手机端</button>
+        </div>
+    </div>
+    <div class="preview-container">
+        <div class="device-frame desktop" id="desktop-frame">
+            <div class="device-label">
+                <span class="icon">🖥️</span>
+                <span>桌面端</span>
+                <span class="resolution">1024px+</span>
+            </div>
+            <div class="iframe-wrapper">
+                <iframe src="http://127.0.0.1:4000" title="桌面端预览"></iframe>
+            </div>
+        </div>
+        <div class="device-frame mobile" id="mobile-frame">
+            <div class="device-label">
+                <span class="icon">📱</span>
+                <span>手机端</span>
+                <span class="resolution">375 x 812</span>
+            </div>
+            <div class="iframe-wrapper">
+                <div class="mobile-notched">
+                    <iframe src="http://127.0.0.1:4000" title="手机端预览" style="width: 375px; height: 812px;"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showMode(mode) {
+            const desktop = document.getElementById('desktop-frame');
+            const mobile = document.getElementById('mobile-frame');
+            const tabs = document.querySelectorAll('.device-tab');
+
+            tabs.forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
+
+            if (mode === 'both') {
+                desktop.style.flex = '1';
+                desktop.classList.remove('hidden');
+                mobile.classList.remove('hidden');
+            } else if (mode === 'desktop') {
+                desktop.style.flex = '1';
+                desktop.classList.remove('hidden');
+                mobile.classList.add('hidden');
+            } else if (mode === 'mobile') {
+                mobile.classList.remove('hidden');
+                desktop.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>

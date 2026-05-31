@@ -9,16 +9,17 @@
   </div>
 
   <div class="author__content">
-    <h3 class="author__name">{{ author.name }}</h3>
-    {% if author.bio %}<p class="author__bio" style="text-align: center !important;">{{ author.bio }}</p>{% endif %}
+    <h3 class="author__name" style="margin-bottom: 8px;">{{ author.name }}</h3>
+    {% if site.description %}<p class="site-description" style="text-align: center; margin: 0; margin-bottom: 5px;">{{ site.description }}</p>{% endif %}
+    {% if author.bio %}<p class="author__bio" style="text-align: center !important; margin: 0; margin-bottom: 5px;">{{ author.bio }}</p>{% endif %}
+    <div style="text-align: center; margin-top: 8px; margin-bottom: 8px;">
+      <img src="校徽.svg" alt="Southeast University Logo" style="width: 140px; height: auto;">
+    </div>
   </div>
 
   <div class="author__urls-wrapper">
     <!-- <button class="btn btn--inverse">More Info & Contact</button> -->
     <ul class="author__urls social-icons">
-      {% if site.description %}
-        <li><div class="site-description" style="white-space: pre-line; text-align: left; hyphens: auto; word-wrap: break-word; word-spacing: normal; letter-spacing: normal; max-width: 100%;">{{ site.description }}</div></li>
-      {% endif %}
       {% if author.location %}
         <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> {{ author.location }}</li>
       {% endif %}
@@ -27,9 +28,6 @@
       {% endif %}
       {% if author.uri %}
         <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
-      {% endif %}
-      {% if author.email %}
-        <li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> Email</a></li>
       {% endif %}
       {% if author.keybase %}
         <li><a href="https://keybase.io/{{ author.keybase }}"><i class="fas fa-fw fa-key" aria-hidden="true"></i> Keybase</a></li>
@@ -114,6 +112,12 @@
       {% endif %}
       {% if author.orcid %}
         <li><a href="{{ author.orcid }}"><i class="ai ai-orcid-square ai-fw"></i> ORCID</a></li>
+      {% endif %}
+      {% if author.wechat %}
+        <li><i class="fab fa-fw fa-weixin" aria-hidden="true"></i> {{ author.wechat }}</li>
+      {% endif %}
+      {% if author.email %}
+        <li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> {{ author.email }}</a></li>
       {% endif %}
       {% if author.impactstory %}
         <li><a href="{{ author.impactstory }}"><i class="ai ai-impactstory ai-fw"></i> Impactstory</a></li>
@@ -212,6 +216,9 @@
       {% endif %}
       {% if author.orcid %}
         <a href="{{ author.orcid }}"><i class="ai ai-orcid-square ai-fw"></i></a>
+      {% endif %}
+      {% if author.wechat %}
+        <span title="{{ author.wechat }}"><i class="fab fa-fw fa-weixin" aria-hidden="true"></i></span>
       {% endif %}
       {% if author.impactstory %}
         <a href="{{ author.impactstory }}"><i class="ai ai-impactstory ai-fw"></i></a>

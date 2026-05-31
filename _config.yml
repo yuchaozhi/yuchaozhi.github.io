@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "Chaozhi Yu (喻超智)"
-description              : "A Master Student in Spatio-\ntemporal Data Mining and Machine Learning."
+description              : "Ph.D. Student"
 repository               : "yuchaozhi/yuchaozhi.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -23,12 +23,12 @@ baidu_site_verification  : code-ZxFK3f4pfb
 author:
   name             : "Chaozhi Yu (喻超智)"
   avatar           : "images/cz_profile.jpg"
-  bio              : "Hainan University"
-  location         : "Hainan, China"
+  bio              : "Southeast University"
+  location         : "Nanjing, China"
   employer         :
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=bZ9TsCcAAAAJ"
-  email            : "yuchaozhi@hainanu.edu.cn"
+  email            : "yuchaozhi1123@163.com"
   researchgate     : "https://www.researchgate.net/profile/Chaozhi-Yu"
   semanticscholar  : "https://www.semanticscholar.org/author/Chaozhi-Yu/2346930896"
   uri              :
@@ -47,6 +47,7 @@ author:
   linkedin         : 
   dblp             : #"https://dblp.org/pid/75/6568-6.html"
   orcid            : "https://orcid.org/0009-0006-0087-3161"
+  wechat           : "Telescope_yu"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
