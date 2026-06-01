@@ -1,31 +1,31 @@
 # main links links
 main:
   - title: "About Me"
-    url: "/#about-me"
+    url: "#about-me"
 
   - title: "News"
-    url: "/#-news"
+    url: "#-news"
 
   - title: "Funding"
-    url: "/#-funding"
+    url: "#-funding"
 
   - title: "Publications"
-    url: "/#-publications"
+    url: "#-publications"
 
   - title: "Honors and Awards"
-    url: "/#-honors-and-awards"
+    url: "#-honors-and-awards"
 
   # - title: "Educations"
-  #   url: "/#-educations"
+  #   url: "#-educations"
 
   # - title: "Internships"
-  #   url: "/#-internships"
+  #   url: "#-internships"
 
   # - title: "Skills"
-  #   url: "/#-skills"
+  #   url: "#-skills"
 
   - title: "Team"
-    url: "/#-team"
+    url: "#-team"
 
   - title: "Links"
     url: "/links/"
