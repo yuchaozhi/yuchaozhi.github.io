@@ -13,6 +13,10 @@
           animation-delay: 0.15s;
   z-index: 20;
 
+  @media (max-width: 768px) {
+    display: none;
+  }
+
   &__inner-wrap {
     @include container;
     @include clearfix;

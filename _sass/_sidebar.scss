@@ -77,19 +77,27 @@
   align-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .author__avatar {
-  display: table-cell;
-  vertical-align: top;
-  width: 75px;
-  // set width only, for non-square avatars
-  // height: 36px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 
   @include breakpoint($large) {
-    display: block;
-    width: auto;
+    width: 100%;
     height: auto;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 15px;
+    margin-bottom: 10px;
   }
 
   img {
@@ -101,23 +109,31 @@
       padding: 5px;
       border: 1px solid $border-color;
     }
+
+    @media (max-width: 768px) {
+      max-width: 110px;
+    }
   }
 }
 
 .author__content {
-  display: table-cell;
-  vertical-align: top;
+  display: block;
   padding-left: 10px;
   min-width: 180px;
   // padding-right: 25px;
   line-height: 1;
-  text-align: left;
+  text-align: center;
 
   @include breakpoint($large) {
     display: block;
     width: 100%;
     padding-left: 0;
     padding-right: 0;
+  }
+
+  @media (max-width: 768px) {
+    text-align: center;
+    padding-left: 0;
   }
 }
 
@@ -158,7 +174,7 @@
 
 .author__urls-wrapper {
   position: relative;
-  display: table-cell;
+  display: block;
   vertical-align: middle;
   font-family: $sans-serif;
   z-index: 10;
@@ -267,14 +283,63 @@
 .author__urls_sm{
   padding: .25em;
   font-size: 1.75em;
-  display: block;
-  a {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.2em;
+  align-items: center;
+  a, span {
     color: inherit;
     text-decoration: none;
     &:hover {
       text-decoration: underline;
     }
   }
+
+  @media (max-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.4em;
+    font-size: 1em;
+
+    .sm-link-card {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 0.4em;
+      padding: 0.5em 0.4em;
+      border: 1px solid #e6e8ee;
+      border-radius: 0.5em;
+      background: #ffffff;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
+      color: #043361 !important;
+      font-size: 0.85rem;
+      text-decoration: none;
+      transition: color 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+      font-family: inherit;
+      cursor: pointer;
+      margin: 0;
+      width: auto;
+      min-width: 0;
+
+      i, img {
+        font-size: 1.1em;
+      }
+
+      .sm-link-label {
+        font-size: 0.8em;
+        font-family: $sans-serif;
+        white-space: nowrap;
+      }
+
+      &:hover {
+        color: #39c !important;
+        transform: translateX(2px);
+        border-color: #cddbf7;
+      }
+    }
+  }
+
   @include breakpoint($large) {
     display: none;
   }

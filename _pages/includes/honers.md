@@ -1,6 +1,6 @@
 # 🎖 Honors and Awards
 
-- *2025.06* Role Model of Yefeng College Hainan University
+<!-- - *2025.06* Role Model of Yefeng College Hainan University
 - *2024.12* The Second Prize in the 21st Huawei Cup China Postgraduate Mathematical Modeling Competition
 - *2024.11* Approval of the National College Student Innovation and Entrepreneurship Training Program Project
 - *2024.10* The Gold Award of the China International College Students' Innovation and Entrepreneurship Competition (Hainan Region)
@@ -12,5 +12,19 @@
 - *2023.01* The First Prize in the 14th National Undergraduate Mathematics Competition
 - *2022.12* The Second Prize in the 5th Hua Jiao Cup National College Student Mathematics Competition
 - *2022.06* The First Prize in the 16th College Students Higher Mathematics Competition, Shaanxi University of Science and Technology
+- *2022.06* The Silver Medal in the First National College Student Olympiad Mathematics Competition
+- *2022.06* The Second Prize in the 3rd National College Mathematics Competence Challenge -->
+
+- *2025.06* Role Models of the Academy
+- *2024.12* The Second Prize in the 21st Huawei Cup China Postgraduate Mathematical Modeling Competition
+- *2024.11* Approval of National College Student Innovation and Entrepreneurship Training Program Project
+- *2024.10* The Gold Award in China International College Students' Innovation and Entrepreneurship Competition
+- *2024.10* Approval of Graduate Student Science and Technology Innovation Project
+- *2024.10* Best Scientific Innovation Project, Graduate Student Science and Technology Festival
+- *2024.07* The Third Prize in the 10th National College Students' Statistical Modeling Competition
+- *2024.06* The Bronze Award in the 14th "Challenge Cup" China College Students' Entrepreneurship Competition
+- *2023.12* Approval of Provincial Postgraduate Innovative Scientific Research Project
+- *2023.01* The First Prize in the 14th National Undergraduate Mathematics Competition
+- *2022.12* The Second Prize in the 5th Hua Jiao Cup National College Student Mathematics Competition
 - *2022.06* The Silver Medal in the First National College Student Olympiad Mathematics Competition
 - *2022.06* The Second Prize in the 3rd National College Mathematics Competence Challenge

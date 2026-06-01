@@ -223,6 +223,29 @@
       }
     }
 
+    @media (max-width: 768px) {
+      display: flex;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      li {
+        display: block;
+        flex-shrink: 0;
+
+        &:last-child {
+          position: sticky;
+          right: 0;
+          background: $background-color;
+          z-index: 10;
+          box-shadow: -4px 0 8px rgba(0, 0, 0, 0.05);
+        }
+      }
+    }
+
     a {
       position: relative;
 

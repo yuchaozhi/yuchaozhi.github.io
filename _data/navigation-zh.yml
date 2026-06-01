@@ -1,0 +1,22 @@
+# 中文导航链接
+main:
+  - title: "关于我"
+    url: "/zh/#about-me"
+
+  - title: "最新动态"
+    url: "/zh/#-news"
+
+  - title: "科研项目"
+    url: "/zh/#-funding"
+
+  - title: "学术论文"
+    url: "/zh/#-publications"
+
+  - title: "荣誉奖项"
+    url: "/zh/#-honors-and-awards"
+
+  - title: "团队成员"
+    url: "/zh/#-team"
+
+  - title: "相关链接"
+    url: "/links/"
