@@ -151,7 +151,7 @@
         <a href="{{ author.orcid }}" class="sm-link-card"><i class="ai ai-orcid-square ai-fw"></i><span class="sm-link-label">ORCID</span></a>
       {% endif %}
       {% if author.wechat %}
-        <button class="sm-link-card" title="{{ author.wechat }}" onclick="navigator.clipboard.writeText('{{ author.wechat }}').then(function(){alert('已复制微信号: {{ author.wechat }}')})"><i class="fab fa-fw fa-weixin" aria-hidden="true"></i><span class="sm-link-label">WeChat</span></button>
+        <button class="sm-link-card" title="{{ author.wechat }}" onclick="event.stopPropagation(); navigator.clipboard.writeText('{{ author.wechat }}').then(function(){alert('已复制微信号: {{ author.wechat }}')})"><i class="fab fa-fw fa-weixin" aria-hidden="true"></i><span class="sm-link-label">WeChat</span></button>
       {% endif %}
       {% if author.email %}
         <a href="mailto:{{ author.email }}" class="sm-link-card"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i><span class="sm-link-label">Email</span></a>

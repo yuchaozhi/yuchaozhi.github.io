@@ -2,6 +2,10 @@
    MASTHEAD
    ========================================================================== */
 
+html {
+  scroll-padding-top: 60px;
+}
+
 .masthead {
   position: sticky;
   top: 0;
@@ -12,10 +16,6 @@
   -webkit-animation-delay: 0.15s;
           animation-delay: 0.15s;
   z-index: 20;
-
-  @media (max-width: 768px) {
-    display: none;
-  }
 
   &__inner-wrap {
     @include container;
@@ -48,10 +48,7 @@
 }
 
 .masthead__menu-home-item {
-  @include breakpoint($medium) {
-    display: block !important;
-  }
-  display: none !important;
+  display: block !important;
 }
 
 .masthead__menu-item {
@@ -60,8 +57,11 @@
   white-space: nowrap;
 
   &--lg {
-    padding-right: 2em;
     font-weight: 700;
+
+    @media (min-width: 769px) {
+      padding-right: 2em;
+    }
   }
 }
 

@@ -18,5 +18,5 @@ main:
   - title: "团队成员"
     url: "#-team"
 
-  - title: "相关链接"
-    url: "/zh/links/"
+  # - title: "相关链接"
+  #   url: "/zh/links/"

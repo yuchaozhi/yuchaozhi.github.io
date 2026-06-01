@@ -10,6 +10,18 @@
 <meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="{{ '/assets/css/academicons.css' | relative_url }}"/>
 
+<link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+{% if page.lang == 'zh' or page.lang == 'cn' or page.layout == 'home-zh' %}
+<link rel="prefetch" href="/zh/" as="document">
+<link rel="prefetch" href="/" as="document">
+{% else %}
+<link rel="prefetch" href="/" as="document">
+<link rel="prefetch" href="/zh/" as="document">
+{% endif %}
+
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({

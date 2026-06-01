@@ -50,7 +50,8 @@
 
 .page__content {
   #about-me{
-    margin-top: -10em;
+    @include breakpoint($large) {
+      margin-top: -10em;
       &:before { 
         content: ''; 
         display: block; 
@@ -58,6 +59,7 @@
         width: 0; 
         height: 10em; 
         margin-top: -10em;
+      }
     }
   }
   h1 {

@@ -27,5 +27,5 @@ main:
   - title: "Team"
     url: "#-team"
 
-  - title: "Links"
-    url: "/links/"
+  # - title: "Links"
+  #   url: "/links/"

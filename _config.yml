@@ -6,7 +6,7 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-title                    : "Chaozhi Yu (喻超智)"
+title                    : "喻超智 | 东南大学"
 description              : "Ph.D. Student"
 repository               : "yuchaozhi/yuchaozhi.github.io"
 google_scholar_stats_use_cdn : true

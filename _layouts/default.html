@@ -11,35 +11,13 @@ layout: compress
 
   <body>
 
+    <div id="top"></div>
+
     {% include browser-upgrade.html %}
     {% include masthead.html %}
 
     <div id="main" role="main">
       {% include sidebar.html %}
-
-      <div class="mobile-nav-bar">
-        {% if page.lang == 'zh' %}
-          <a href="#about-me">首页</a>
-          <a href="#about-me">关于我</a>
-          <a href="#-news">最新动态</a>
-          <a href="#-funding">科研项目</a>
-          <a href="#-publications">学术论文</a>
-          <a href="#-honors-and-awards">荣誉奖项</a>
-          <a href="#-team">团队成员</a>
-          <a href="/zh/links/">相关链接</a>
-          <a href="/">English</a>
-        {% else %}
-          <a href="#about-me">Homepage</a>
-          <a href="#about-me">About Me</a>
-          <a href="#-news">News</a>
-          <a href="#-funding">Funding</a>
-          <a href="#-publications">Publications</a>
-          <a href="#-honors-and-awards">Honors and Awards</a>
-          <a href="#-team">Team</a>
-          <a href="/links/">Links</a>
-          <a href="/zh/">中文</a>
-        {% endif %}
-      </div>
 
       <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
         {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}

@@ -4,7 +4,7 @@
       <nav id="site-nav" class="greedy-nav">
         <button><div class="navicon"></div></button>
         <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg masthead__menu-home-item"><a href="#about-me">{% if page.lang == 'zh' %}主页{% else %}Homepage{% endif %}</a></li>
+          <li class="masthead__menu-item masthead__menu-item--lg masthead__menu-home-item"><a href="#top">{% if page.lang == 'zh' %}主页{% else %}Homepage{% endif %}</a></li>
           {% if page.lang == 'zh' %}
             {% for link in site.data.navigation-zh.main %}
               <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
