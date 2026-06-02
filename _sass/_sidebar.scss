@@ -181,6 +181,7 @@
   position: relative;
   margin-left: auto;
   cursor: pointer;
+  width: 100%;
 
   li:last-child {
     a {
@@ -288,6 +289,10 @@
   justify-content: center;
   gap: 0.2em;
   align-items: center;
+  max-width: 100%;
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
   a, span {
     color: inherit;
     text-decoration: none;
@@ -301,6 +306,10 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 0.4em;
     font-size: 1em;
+
+    *, *::before, *::after {
+      -webkit-tap-highlight-color: transparent !important;
+    }
 
     .sm-link-card {
       display: flex;
@@ -321,6 +330,16 @@
       margin: 0;
       width: auto;
       min-width: 0;
+      -webkit-tap-highlight-color: transparent !important;
+      -webkit-touch-callout: none;
+      touch-action: manipulation;
+      user-select: none;
+      outline: none !important;
+
+      &:active {
+        background: #ffffff;
+        -webkit-tap-highlight-color: transparent !important;
+      }
 
       i, img {
         font-size: 1.1em;
