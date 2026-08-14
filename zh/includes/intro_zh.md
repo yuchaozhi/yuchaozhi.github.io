@@ -3,7 +3,7 @@
 {::options parse_block_html="true" /}
 <div class="about-text">
 
-喻超智，**东南大学**2026级数学博士研究生。在**IEEE TCE、IEEE IOTJ、IEEE SPL、IJCTA**等国际期刊和会议上发表学术论文8篇（中科院一区、TOP 期刊2篇），被引20余次 [![Citations](https://img.shields.io/endpoint?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fyuchaozhi%2Fyuchaozhi.github.io@google-scholar-stats%2Fgs_data_shieldsio.json&labelColor=f6f6f6&color=9cf&style=flat&label=citations)](https://scholar.google.com/citations?user=bZ9TsCcAAAAJ)，h-index为3，并获得2项计算机软件著作权。主持1项研究生科技创新项目，参与国自然、省自然、国创计划等科研课题。获得国家奖学金、“华为杯”第二十一届中国研究生数学建模竞赛全国二等奖、第十四届全国大学生数学竞赛一等奖、中国国际大学生创新创业大赛省级金奖等10余项奖项和荣誉。
+喻超智，**东南大学**2026级数学博士研究生。曾赴中国科学院信息工程研究所参加短期学习，并获评优秀学员。在**IEEE TCE、IEEE IOTJ、IEEE SPL、IJCTA**等国际期刊和会议上发表学术论文8篇（中科院一区、TOP 期刊2篇），被引20余次 [![Citations](https://img.shields.io/endpoint?logo=Google%20Scholar&url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fyuchaozhi%2Fyuchaozhi.github.io@google-scholar-stats%2Fgs_data_shieldsio.json&labelColor=f6f6f6&color=9cf&style=flat&label=citations)](https://scholar.google.com/citations?user=bZ9TsCcAAAAJ)，h-index为3，并获得2项计算机软件著作权。主持1项研究生科技创新项目，参与国自然、省自然、国创计划等科研课题。获得国家奖学金、“华为杯”第二十一届中国研究生数学建模竞赛全国二等奖、第十四届全国大学生数学竞赛一等奖、中国国际大学生创新创业大赛省级金奖等10余项奖项和荣誉。
 
 欢迎硕士、博士研究生以及科研热情的本科生与我交流合作，一起开展科研与学习。若对相关研究方向感兴趣，欢迎随时与我联系。有意向加入课题组的同学请加我的微信或发送Email到我的邮箱。
 
