@@ -21,5 +21,5 @@ lang: zh
 <span class='anchor' id='-honors-and-awards'></span>
 {% include_relative includes/honers_zh.md %}
 
-<span class='anchor' id='-team'></span>
-{% include_relative includes/team_zh.md %}
+<!-- <span class='anchor' id='-team'></span>
+{% include_relative includes/team_zh.md %} -->

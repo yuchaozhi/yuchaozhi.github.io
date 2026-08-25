@@ -24,8 +24,8 @@ main:
   # - title: "Skills"
   #   url: "#-skills"
 
-  - title: "Team"
-    url: "#-team"
+  # - title: "Team"
+  #   url: "#-team"
 
   # - title: "Links"
   #   url: "/links/"
