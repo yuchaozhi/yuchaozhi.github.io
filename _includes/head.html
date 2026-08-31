@@ -130,7 +130,7 @@ function parseBibtexEntry(text) {
 
 // 从 reference.bib 文件加载 BibTeX 数据
 function loadBibtexFromFile() {
-  fetch('/reference.bib')
+  fetch('/reference.bib?v=' + Date.now())
     .then(response => response.text())
     .then(data => {
       // 解析 BibTeX 文件
