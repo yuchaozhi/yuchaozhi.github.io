@@ -1,12 +1,14 @@
 <script>
     $(document).ready(function () {
-        {% if site.google_scholar_stats_use_cdn %}
-        var gsDataBaseUrl = 'https://cdn.jsdelivr.net/gh/{{ site.repository }}@'
+        {% if site.google_scholar_stats_api %}
+        var gsDataUrl = '{{ site.google_scholar_stats_api }}/data.json';
+        {% elsif site.google_scholar_stats_use_cdn %}
+        var gsDataUrl = 'https://cdn.jsdelivr.net/gh/{{ site.repository }}@google-scholar-stats/gs_data.json';
         {% else %}
-        var gsDataBaseUrl = 'https://raw.githubusercontent.com/{{ site.repository }}/'
+        var gsDataUrl = 'https://raw.githubusercontent.com/{{ site.repository }}/google-scholar-stats/gs_data.json';
         {% endif %}
         setTimeout(function() {
-            $.getJSON(gsDataBaseUrl + "google-scholar-stats/gs_data.json", function (data) {
+            $.getJSON(gsDataUrl, function (data) {
                 var citationEles = document.getElementsByClassName('show_paper_citations')
                 Array.prototype.forEach.call(citationEles, element => {
                     var paperId = element.getAttribute('data')

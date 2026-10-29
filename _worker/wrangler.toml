@@ -10,3 +10,7 @@ GOOGLE_SCHOLAR_ID = "bZ9TsCcAAAAJ"
 [[kv_namespaces]]
 binding = "GS_DATA"
 id = "90de9e236bd14458a579e10a20f0bc90"
+
+[triggers]
+crons = ["0 */6 * * *"]
+
