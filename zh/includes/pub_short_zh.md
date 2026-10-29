@@ -29,6 +29,27 @@
   </div>
 </div>
 
+<!-- ESWA 2026 -->
+<div class="publication-entry" data-tags="first-author sci-q1 spatiotemporal spatiotemporal-forecasting traffic-flow">
+  <div class="publication-header">
+    <span class="type-badge">Journal</span>
+    <span class="venue-badge">SCI Q1 · 中科院一区Top · IF 9.4</span>
+  </div>
+  <div class="publication-title">
+    Learning Invariant Causal Logic for Traffic Flow Forecasting: A Disentangled Spatiotemporal Intervention Approach
+  </div>
+  <div class="publication-authors">
+    <strong>Chaozhi Yu</strong>, Hongnan Cheng, Zhizhe Lin, Heng Zhang, Teng Zhou, Xin Zhao, Chunjie Cao
+  </div>
+  <div class="publication-venue-line">
+    <span class="publication-venue">Expert Systems with Applications</span>
+    <span class="pub-year-inline">2026</span>
+    <div class="publication-actions">
+      \cite{yu2026learning}
+    </div>
+  </div>
+</div>
+
 <!-- IEEE SPL MCANet -->
 <div class="publication-entry" data-tags="first-author sci-q2 image-processing with-code">
   <div class="publication-header">
@@ -55,6 +76,27 @@
       <a href="https://github.com/yuchaozhi/MCANet" class="action-btn code-btn" target="_blank">
         <i class="fa-brands fa-github"></i> Code
       </a>
+    </div>
+  </div>
+</div>
+
+<!-- Computational Statistics 2026 -->
+<div class="publication-entry" data-tags="machine learning">
+  <div class="publication-header">
+    <span class="type-badge">Journal</span>
+    <span class="venue-badge">SCI Q2 · IF 1.3</span>
+  </div>
+  <div class="publication-title">
+    Medical Status Forecasting with Markov Feature Engineering for Autocorrelated Categorical Response Variable
+  </div>
+  <div class="publication-authors">
+    Xin Zhao, <strong>Chaozhi Yu</strong>, Xiaokai Nie
+  </div>
+  <div class="publication-venue-line">
+    <span class="publication-venue">Computational Statistics</span>
+    <span class="pub-year-inline">2026</span>
+    <div class="publication-actions">
+      \cite{zhao2026medical}
     </div>
   </div>
 </div>
@@ -173,6 +215,7 @@
   </div>
 </div>
 
+{% comment %}
 <!-- ACM EITCE 2025 -->
 <div class="publication-entry" data-tags="first-author conference spatiotemporal spatiotemporal-forecasting">
   <div class="publication-header">
@@ -224,5 +267,6 @@
     </div>
   </div>
 </div>
+{% endcomment %}
 
 </div>
