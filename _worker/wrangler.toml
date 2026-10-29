@@ -1,0 +1,12 @@
+name = "scholar-badge"
+main = "scholar-badge.js"
+compatibility_date = "2026-01-01"
+
+[vars]
+GOOGLE_SCHOLAR_ID = "bZ9TsCcAAAAJ"
+
+# 部署前先执行：wrangler kv namespace create GS_DATA
+# 然后把返回的 id 填到下面
+[[kv_namespaces]]
+binding = "GS_DATA"
+id = "90de9e236bd14458a579e10a20f0bc90"

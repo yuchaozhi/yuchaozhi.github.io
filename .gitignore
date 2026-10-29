@@ -2,3 +2,7 @@ _site/
 push.sh
 .DS_Store
 /github_myprofile_updater/README.md
+
+# 本地抓取产物与 Worker 部署缓存
+google_scholar_crawler/results/
+_worker/.wrangler/

@@ -14,7 +14,10 @@ from datetime import datetime
 
 import requests
 
-PROFILE_URL = "https://scholar.google.com/citations?hl=en&user={scholar_id}"
+PROFILE_URLS = (
+    "https://scholar.google.com/citations?hl=en&user={scholar_id}",
+    "https://scholar.google.com.hk/citations?hl=zh-CN&user={scholar_id}",
+)
 
 HEADERS = {
     "User-Agent": (
@@ -32,38 +35,55 @@ HEADERS = {
 }
 
 BLOCKED_MARKERS = ("gs_captcha_ccl", "unusual traffic", "not a robot", "sorry")
-MAX_ATTEMPTS = 6
+MAX_ATTEMPTS = 4
 
 
-def fetch_profile(session: requests.Session, url: str) -> str:
-    """带指数退避重试地取一次主页 HTML。"""
+def normalize_scholar_id(raw: str) -> str:
+    """兼容把整条 Scholar 链接、带引号或带空白的值填进 Secret 的情况。"""
+    value = raw.strip().strip('"\'').strip()
+    match = re.search(r"user=([A-Za-z0-9_-]+)", value)
+    if match:
+        value = match.group(1)
+    return value.split()[0] if value else ""
+
+
+def fetch_profile(session: requests.Session, scholar_id: str) -> str:
+    """按域名依次尝试，单域名内做指数退避重试。"""
     last_error = "unknown error"
-    for attempt in range(1, MAX_ATTEMPTS + 1):
-        try:
-            resp = session.get(url, headers=HEADERS, timeout=30)
-        except requests.RequestException as exc:
-            last_error = f"request failed: {exc}"
-        else:
-            text = resp.text
-            if resp.status_code == 200 and 'class="gsc_rsb_std"' in text:
-                return text
+    for template in PROFILE_URLS:
+        url = template.format(scholar_id=scholar_id)
+        for attempt in range(1, MAX_ATTEMPTS + 1):
+            try:
+                resp = session.get(url, headers=HEADERS, timeout=30)
+            except requests.RequestException as exc:
+                last_error = f"request failed: {exc}"
+            else:
+                text = resp.text
+                if resp.status_code == 200 and 'class="gsc_rsb_std"' in text:
+                    return text
 
-            last_error = f"HTTP {resp.status_code}"
-            lowered = text.lower()
-            if any(marker in lowered for marker in BLOCKED_MARKERS):
-                last_error += " (captcha/blocked page)"
+                last_error = f"HTTP {resp.status_code} {url}"
+                lowered = text.lower()
+                if any(marker in lowered for marker in BLOCKED_MARKERS):
+                    last_error += " (captcha/blocked page)"
 
-            retry_after = resp.headers.get("Retry-After")
-            if retry_after and retry_after.isdigit():
-                wait = min(int(retry_after), 120)
-                print(f"[warn] {last_error}, honor Retry-After {wait}s")
+                if resp.status_code == 404:
+                    # 404 多为 user id 无效，重试无意义，换域名再试一次
+                    snippet = re.sub(r"\s+", " ", text[:160]).strip()
+                    print(f"[warn] 404 on {url}; body starts with: {snippet}")
+                    break
+
+                retry_after = resp.headers.get("Retry-After")
+                if retry_after and retry_after.isdigit():
+                    wait = min(int(retry_after), 120)
+                    print(f"[warn] {last_error}, honor Retry-After {wait}s")
+                    time.sleep(wait)
+                    continue
+
+            wait = min(3 * 2 ** (attempt - 1), 45) + random.uniform(0, 3)
+            print(f"[warn] attempt {attempt}/{MAX_ATTEMPTS} failed: {last_error}; sleep {wait:.1f}s")
+            if attempt < MAX_ATTEMPTS:
                 time.sleep(wait)
-                continue
-
-        wait = min(3 * 2 ** (attempt - 1), 60) + random.uniform(0, 3)
-        print(f"[warn] attempt {attempt}/{MAX_ATTEMPTS} failed: {last_error}; sleep {wait:.1f}s")
-        if attempt < MAX_ATTEMPTS:
-            time.sleep(wait)
 
     raise RuntimeError(f"cannot fetch scholar profile: {last_error}")
 
@@ -108,10 +128,15 @@ def parse_publications(html: str) -> dict:
 
 
 def main() -> int:
-    scholar_id = os.environ.get("GOOGLE_SCHOLAR_ID", "").strip()
+    raw_id = os.environ.get("GOOGLE_SCHOLAR_ID", "")
+    scholar_id = normalize_scholar_id(raw_id)
     if not scholar_id:
         print("[error] GOOGLE_SCHOLAR_ID is not set", file=sys.stderr)
         return 1
+    if raw_id != scholar_id:
+        print(f"[warn] GOOGLE_SCHOLAR_ID 已被清洗为: {scholar_id!r}")
+    else:
+        print(f"[info] using scholar id: {scholar_id!r}")
 
     proxies = {"http": os.environ["SCHOLAR_PROXY"], "https": os.environ["SCHOLAR_PROXY"]} \
         if os.environ.get("SCHOLAR_PROXY") else None
@@ -121,12 +146,17 @@ def main() -> int:
         session.proxies.update(proxies)
 
     try:
-        html = fetch_profile(session, PROFILE_URL.format(scholar_id=scholar_id))
+        html = fetch_profile(session, scholar_id)
         data = parse_stats(html)
         data["name"] = parse_name(html)
         data["publications"] = parse_publications(html)
     except RuntimeError as exc:
         print(f"[error] {exc}", file=sys.stderr)
+        print(
+            "[hint] 若 id 确认无误仍失败，说明该 IP 被 Google 判定为自动化流量。"
+            "可在 Secret 里加 SCHOLAR_PROXY 走代理，或改用 Cloudflare Worker 方案。",
+            file=sys.stderr,
+        )
         return 1
 
     data["updated"] = str(datetime.now())

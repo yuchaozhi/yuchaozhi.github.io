@@ -11,6 +11,9 @@ description              : "Ph.D. Student"
 repository               : "yuchaozhi/yuchaozhi.github.io"
 google_scholar_stats_use_cdn : true
 
+# 引用数徽章数据来源（Cloudflare Worker），留注释则回退到 google-scholar-stats 分支
+google_scholar_stats_api : "https://scholar-badge.yuchaozhi.workers.dev"
+
 # google analytics
 google_analytics_id      : G-S5JQELGWFK
 
