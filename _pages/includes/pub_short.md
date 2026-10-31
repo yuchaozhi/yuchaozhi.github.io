@@ -67,6 +67,9 @@
     <span class="publication-venue">Expert Systems with Applications</span>
     <span class="pub-year-inline">2026</span>
     <div class="publication-actions">
+      <a href="https://doi.org/10.1016/j.eswa.2026.134930" class="action-btn doi-btn" target="_blank">
+        <i class="fa-solid fa-link"></i> DOI
+      </a>
       \cite{yu2026learning}
     </div>
   </div>
