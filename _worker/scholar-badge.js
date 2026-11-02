@@ -10,9 +10,18 @@
  * 定时任务由 wrangler.toml 里的 [triggers] crons 驱动，无需外部触发。
  */
 
-const SCHOLAR_URLS = [
-  "https://scholar.google.com/citations?hl=en&user={id}",
-  "https://scholar.google.com.hk/citations?hl=zh-CN&user={id}",
+const SCHOLAR_HOSTS = [
+  "scholar.google.com",
+  "scholar.google.com.hk",
+  "scholar.google.de",
+  "scholar.google.co.jp",
+];
+
+// 直连被 Google 挡住时的公共读取代理（都免 key）
+const READER_PROXIES = [
+  { name: "r.jina.ai", url: "https://r.jina.ai/{target}", headers: { "X-Return-Format": "html" } },
+  { name: "allorigins", url: "https://api.allorigins.win/raw?url={encoded}", headers: {} },
+  { name: "codetabs", url: "https://api.codetabs.com/v1/proxy?quest={encoded}", headers: {} },
 ];
 
 const BROWSER_HEADERS = {
@@ -32,6 +41,7 @@ const CACHE_HEADERS = {
   "Cache-Control": "public, max-age=300, s-maxage=300, stale-while-revalidate=600",
 };
 const DATA_KEY = "gs_data";
+const GOOD_KEY = "gs_data_good";
 const DEBUG_KEY = "last_run";
 
 export default {
@@ -44,7 +54,7 @@ export default {
     const cors = { "Access-Control-Allow-Origin": "*" };
 
     if (url.pathname === "/debug") {
-      const last = await env.GS_DATA.get(DEBUG_KEY, "json");
+      const last = await readJson(env, DEBUG_KEY);
       return json({ last: last || null }, { ...cors, "Cache-Control": "no-store" });
     }
 
@@ -55,9 +65,9 @@ export default {
       return json(await refresh(env), { ...cors, "Cache-Control": "no-store" });
     }
 
-    let data = await env.GS_DATA.get(DATA_KEY, "json");
+    const data = await readData(env);
     if (!data) {
-      // KV 还是空的：后台抓一次，本次请求先返回，避免徽章接口被上游拖住
+      // 主数据和备份都拿不到：后台抓一次，本次请求先返回，避免徽章接口被上游拖住
       ctx.waitUntil(refresh(env));
     }
 
@@ -81,8 +91,11 @@ async function refresh(env) {
   const attempts = [];
   await env.GS_DATA.put(DEBUG_KEY, JSON.stringify({ phase: "started", at: new Date().toISOString() }));
 
-  for (const template of SCHOLAR_URLS) {
-    const target = template.replace("{id}", scholarId);
+  const profile = `https://scholar.google.com/citations?hl=en&user=${scholarId}`;
+
+  // 1) 直连各地区的 Scholar 域名
+  for (const host of SCHOLAR_HOSTS) {
+    const target = `https://${host}/citations?hl=en&user=${scholarId}`;
     const page = await fetchPage(target);
     attempts.push({ url: target, status: page.status, blocked: page.blocked });
     if (page.html && page.html.includes('class="gsc_rsb_std"')) {
@@ -90,12 +103,25 @@ async function refresh(env) {
     }
   }
 
-  // 直连被 Google 判为自动化流量时，退到 Jina Reader 取回原始 HTML
-  const readerUrl = `https://r.jina.ai/${SCHOLAR_URLS[0].replace("{id}", scholarId)}`;
-  const page = await fetchPage(readerUrl, { "X-Return-Format": "html" });
-  attempts.push({ url: readerUrl, status: page.status, blocked: page.blocked });
-  if (page.html && page.html.includes('class="gsc_rsb_std"')) {
-    return store(env, page.html, "r.jina.ai", attempts);
+  // 2) 直连全是 403 时，改走公共读取代理（按顺序回退）
+  for (const proxy of READER_PROXIES) {
+    const target =
+      proxy.name === "r.jina.ai"
+        ? proxy.url.replace("{target}", profile)
+        : proxy.url
+            .replace("{encoded}", encodeURIComponent(profile))
+            .replace("{target}", profile);
+
+    let page = await fetchPage(target, proxy.headers);
+    if (page.status === 429) {
+      // Jina 免费额度是瞬时限流，等一会儿再试一次
+      await sleep(6000);
+      page = await fetchPage(target, proxy.headers);
+    }
+    attempts.push({ url: target, status: page.status, blocked: page.blocked });
+    if (page.html && page.html.includes('class="gsc_rsb_std"')) {
+      return store(env, page.html, proxy.name, attempts);
+    }
   }
 
   await env.GS_DATA.put(
@@ -133,12 +159,33 @@ async function store(env, html, source, attempts) {
     source,
     updated: new Date().toISOString(),
   };
-  await env.GS_DATA.put(DATA_KEY, JSON.stringify(data));
+  const payload = JSON.stringify(data);
+  await env.GS_DATA.put(DATA_KEY, payload);
+  // 同时写一份“上一次正常值”，供主数据损坏时兜底
+  await env.GS_DATA.put(GOOD_KEY, payload);
   await env.GS_DATA.put(
     DEBUG_KEY,
     JSON.stringify({ ok: true, attempts, at: data.updated })
   );
   return { ok: true, citedby: data.citedby, papers: Object.keys(data.publications).length, source, attempts };
+}
+
+async function readData(env) {
+  const data = await readJson(env, DATA_KEY);
+  if (data && typeof data === "object" && data.citedby != null) return data;
+  const good = await readJson(env, GOOD_KEY);
+  return good && typeof good === "object" ? good : null;
+}
+
+async function readJson(env, key) {
+  try {
+    const text = await env.GS_DATA.get(key);
+    if (!text) return null;
+    const clean = String(text).replace(/^\uFEFF/, "").trim();
+    return clean ? JSON.parse(clean) : null;
+  } catch {
+    return null;
+  }
 }
 
 function normalizeId(raw) {
@@ -184,6 +231,10 @@ function parsePublications(html) {
     };
   }
   return publications;
+}
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 function json(obj, headers = {}) {
