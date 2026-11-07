@@ -4,6 +4,7 @@
 避免 scholarly 逐条论文抓取带来的高频请求与 429。
 """
 
+import argparse
 import json
 import os
 import random
@@ -127,34 +128,84 @@ def parse_publications(html: str) -> dict:
     return publications
 
 
+def load_local_html(path: str) -> str:
+    """读取浏览器另存的 Scholar 主页，绕开被 Google 封锁的网络抓取。"""
+    with open(path, encoding="utf-8-sig", errors="replace") as infile:
+        return infile.read()
+
+
+def previous_citedby(path: str = "results/gs_data.json"):
+    """读上一次写入的引用数，用于“新值不许回退”保护。"""
+    try:
+        with open(path, encoding="utf-8") as infile:
+            value = json.load(infile).get("citedby")
+    except (OSError, ValueError, AttributeError):
+        return None
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return None
+
+
 def main() -> int:
+    parser = argparse.ArgumentParser(description="抓取 Google Scholar 引用数据")
+    parser.add_argument(
+        "--from-html",
+        metavar="FILE",
+        help="不联网，直接解析浏览器另存的 Scholar 主页 HTML",
+    )
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="允许写入比上一次更小的引用数",
+    )
+    args = parser.parse_args()
+
     raw_id = os.environ.get("GOOGLE_SCHOLAR_ID", "")
     scholar_id = normalize_scholar_id(raw_id)
-    if not scholar_id:
+    if not args.from_html and not scholar_id:
         print("[error] GOOGLE_SCHOLAR_ID is not set", file=sys.stderr)
         return 1
-    if raw_id != scholar_id:
+    if scholar_id and raw_id != scholar_id:
         print(f"[warn] GOOGLE_SCHOLAR_ID 已被清洗为: {scholar_id!r}")
-    else:
+    elif scholar_id:
         print(f"[info] using scholar id: {scholar_id!r}")
 
-    proxies = {"http": os.environ["SCHOLAR_PROXY"], "https": os.environ["SCHOLAR_PROXY"]} \
-        if os.environ.get("SCHOLAR_PROXY") else None
-
-    session = requests.Session()
-    if proxies:
-        session.proxies.update(proxies)
-
     try:
-        html = fetch_profile(session, scholar_id)
+        if args.from_html:
+            print(f"[info] parsing local html: {args.from_html}")
+            html = load_local_html(args.from_html)
+            if 'class="gsc_rsb_std"' not in html:
+                raise RuntimeError(
+                    '本地文件里没有 Scholar 统计块（class="gsc_rsb_std"），'
+                    "请确认另存的是个人主页（含引用数那一页）"
+                )
+        else:
+            proxies = {"http": os.environ["SCHOLAR_PROXY"], "https": os.environ["SCHOLAR_PROXY"]} \
+                if os.environ.get("SCHOLAR_PROXY") else None
+
+            session = requests.Session()
+            if proxies:
+                session.proxies.update(proxies)
+            html = fetch_profile(session, scholar_id)
+
         data = parse_stats(html)
         data["name"] = parse_name(html)
         data["publications"] = parse_publications(html)
-    except RuntimeError as exc:
+    except (RuntimeError, OSError) as exc:
         print(f"[error] {exc}", file=sys.stderr)
         print(
             "[hint] 若 id 确认无误仍失败，说明该 IP 被 Google 判定为自动化流量。"
-            "可在 Secret 里加 SCHOLAR_PROXY 走代理，或改用 Cloudflare Worker 方案。",
+            "此时可用浏览器打开主页另存为 HTML，再执行: python main.py --from-html page.html",
+            file=sys.stderr,
+        )
+        return 1
+
+    previous = previous_citedby()
+    if previous is not None and data["citedby"] < previous and not args.force:
+        print(
+            f"[error] 新引用数 {data['citedby']} 小于已记录的 {previous}，已中止写入。"
+            "确认无误可加 --force",
             file=sys.stderr,
         )
         return 1

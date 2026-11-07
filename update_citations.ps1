@@ -1,12 +1,24 @@
-# Update Google Scholar citation data from this machine and upload it to Cloudflare KV
+# Update Google Scholar citation data and upload it to Cloudflare KV
 # Usage: powershell -ExecutionPolicy Bypass -File .\update_citations.ps1
+#        powershell -ExecutionPolicy Bypass -File .\update_citations.ps1 -Html .\scholar.html
+#        (-Html: 用浏览器另存的本机 HTML，不联网抓取)
+
+param([string]$Html = "")
 
 $root = $PSScriptRoot
 $env:GOOGLE_SCHOLAR_ID = "bZ9TsCcAAAAJ"
 
-Write-Host "[1/2] Fetching Google Scholar ..."
+if ($Html) {
+    $htmlPath = (Resolve-Path $Html).Path
+    Write-Host "[1/2] Parsing local HTML: $htmlPath"
+    $crawlArgs = @("--from-html", $htmlPath)
+} else {
+    Write-Host "[1/2] Fetching Google Scholar ..."
+    $crawlArgs = @()
+}
+
 Push-Location (Join-Path $root "google_scholar_crawler")
-python main.py
+python main.py @crawlArgs
 if ($LASTEXITCODE -ne 0) { Pop-Location; throw "Crawl failed, nothing uploaded" }
 
 Write-Host "[2/2] Uploading to Cloudflare KV ..."

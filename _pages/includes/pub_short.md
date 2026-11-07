@@ -71,6 +71,9 @@
         <i class="fa-solid fa-link"></i> DOI
       </a>
       \cite{yu2026learning}
+      <a href="https://www.researchgate.net/publication/417240972_Learning_Invariant_Causal_Logic_for_Traffic_Flow_Forecasting_A_Disentangled_Spatiotemporal_Intervention_Approach" class="action-btn pdf-btn" target="_blank">
+        <i class="fa-solid fa-file-pdf"></i> PDF
+      </a>
     </div>
   </div>
 </div>
@@ -121,7 +124,13 @@
     <span class="publication-venue">Computational Statistics</span>
     <span class="pub-year-inline">2026</span>
     <div class="publication-actions">
+      <a href="https://doi.org/10.1007/s00180-026-01823-6" class="action-btn doi-btn" target="_blank">
+        <i class="fa-solid fa-link"></i> DOI
+      </a>
       \cite{zhao2026medical}
+      <a href="https://www.researchgate.net/publication/417570201_Medical_status_forecasting_with_Markov_feature_engineering_for_autocorrelated_categorical_response_variable" class="action-btn pdf-btn" target="_blank">
+        <i class="fa-solid fa-file-pdf"></i> PDF
+      </a>
     </div>
   </div>
 </div>
