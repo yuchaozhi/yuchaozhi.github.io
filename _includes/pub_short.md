@@ -1,4 +1,4 @@
-# <i class="fas fa-newspaper" style="color: #333333; margin-right: 0.75em;"></i>Publications
+# <i class="fas fa-newspaper" style="color: #333333; margin-right: 0.75em;"></i>{{ include.title | default: "Publications" }}
 
 <!-- My full paper list is shown at [my personal homepage](https://yuchaozhi.github.io). -->
 

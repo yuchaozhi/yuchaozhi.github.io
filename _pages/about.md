@@ -19,7 +19,7 @@ redirect_from:
 {% include_relative includes/funding.md %}
 
 <span class='anchor' id='-publications'></span>
-{% include_relative includes/pub_short.md %}
+{% include pub_short.md %}
 
 <span class='anchor' id='-honors-and-awards'></span>
 {% include_relative includes/honers.md %}

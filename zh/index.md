@@ -16,7 +16,7 @@ lang: zh
 {% include_relative includes/funding_zh.md %}
 
 <span class='anchor' id='-publications'></span>
-{% include_relative includes/pub_short_zh.md %}
+{% include pub_short.md title="学术论文" %}
 
 <span class='anchor' id='-honors-and-awards'></span>
 {% include_relative includes/honers_zh.md %}
