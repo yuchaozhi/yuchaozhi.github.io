@@ -28,7 +28,7 @@
 <div class="publication-entry" data-tags="first-author sci-q1 spatiotemporal spatiotemporal-forecasting traffic-flow">
   <div class="publication-header">
     <span class="type-badge">Journal</span>
-    <span class="venue-badge">SCI Q1 · 中科院一区Top · IF 10.9</span>
+    <span class="venue-badge">SCI Q1 · 中科院一区TOP · IF 10.9</span>
   </div>
   <div class="publication-title">
     Quantum-Inspired Dynamic Spatiotemporal Matching Transformer for Traffic Flow Forecasting
@@ -55,7 +55,7 @@
 <div class="publication-entry" data-tags="first-author sci-q1 spatiotemporal spatiotemporal-forecasting traffic-flow">
   <div class="publication-header">
     <span class="type-badge">Journal</span>
-    <span class="venue-badge">SCI Q1 · 中科院一区Top · IF 9.4</span>
+    <span class="venue-badge">SCI Q1 · 中科院一区TOP · IF 9.4</span>
   </div>
   <div class="publication-title">
     Learning Invariant Causal Logic for Traffic Flow Forecasting: A Disentangled Spatiotemporal Intervention Approach
@@ -139,7 +139,7 @@
 <div class="publication-entry" data-tags="sci-q1 spatiotemporal spatiotemporal-forecasting traffic-flow">
   <div class="publication-header">
     <span class="type-badge">Journal</span>
-    <span class="venue-badge">SCI Q1 · 中科院一区Top · IF 8.9</span>
+    <span class="venue-badge">SCI Q1 · 中科院一区TOP · IF 8.9</span>
   </div>
   <div class="publication-title">
     Cross City Pre-Training Transfer Learning Model for Traffic Flow Prediction
@@ -156,6 +156,33 @@
       </a>
       \cite{lin2026cross}
       <a href="https://www.researchgate.net/publication/404017999_Cross_City_Pre-Training_Transfer_Learning_Model_for_Traffic_Flow_Prediction" class="action-btn pdf-btn" target="_blank">
+        <i class="fa-solid fa-file-pdf"></i> PDF
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Knowledge-Based Systems 2026 -->
+<div class="publication-entry" data-tags="sci-q1 spatiotemporal spatiotemporal-forecasting traffic-flow">
+  <div class="publication-header">
+    <span class="type-badge">Journal</span>
+    <span class="venue-badge">SCI Q1 · 中科院一区TOP · IF 8.0</span>
+  </div>
+  <div class="publication-title">
+    Auxiliary Supervision in Graph Traffic Forecasting: A Controlled Study of Utility and Loss Effects
+  </div>
+  <div class="publication-authors">
+    Chengyin Liu, <strong>Chaozhi Yu</strong>, Zhizhe Lin, Hai Xie, Teng Zhou, Guangyin Jin
+  </div>
+  <div class="publication-venue-line">
+    <span class="publication-venue">Knowledge-Based Systems</span>
+    <span class="pub-year-inline">2026</span>
+    <div class="publication-actions">
+      <a href="https://doi.org/10.1016/j.knosys.2026.117370" class="action-btn doi-btn" target="_blank">
+        <i class="fa-solid fa-link"></i> DOI
+      </a>
+      \cite{liu2026auxiliary}
+      <a href="https://www.researchgate.net/publication/418327154_Auxiliary_supervision_in_graph_traffic_forecasting_A_controlled_study_of_utility_and_loss_effects" class="action-btn pdf-btn" target="_blank">
         <i class="fa-solid fa-file-pdf"></i> PDF
       </a>
     </div>
